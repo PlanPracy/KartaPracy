@@ -1,0 +1,32 @@
+﻿@model KartaPracy.ViewModels.SklepViewModel
+
+@{
+    ViewBag.Title = Model.Tytul;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Tytul</h2>
+@using (@Html.BeginForm("Save", "Sklep"))
+{
+    <div class="form-group">
+        @Html.LabelFor(s => s.Sklep.Nazwa)
+        @Html.TextBoxFor(s => s.Sklep.Nazwa, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Sklep.Nazwa)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Sklep.KontaktId)
+        @Html.DropDownListFor(s => s.Sklep.KontaktId, new SelectList(Model.Kontakts, "Id", "Nazwisko"), "Wybierz osobę do kontaktu", new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Sklep.KontaktId)
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(s => s.Sklep.FormatSklep)
+        @Html.DropDownListFor(s => s.Sklep.FormatSklepu, new SelectList(Model.Sklep.FormatSklepu), "Wybierz format", new { @class = "form-control" })
+        
+
+    </div>*@
+
+    @Html.HiddenFor(s => s.Sklep.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}

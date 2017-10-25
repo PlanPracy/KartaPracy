@@ -1,0 +1,27 @@
+﻿@model System.Collections.Generic.List<KartaPracy.Models.Sklep>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>Sklepy</h2>
+    <p>@Html.ActionLink("Dodaj sklep", "New", "Sklep", null, new { @class = "btn btn-primary" })</p>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Sklep</th>
+                <th>Kontakt</th>
+                <th>Typ sklepu</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sklep in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new { id = sklep.Id }, null)</td>
+                    <td>@sklep.Kontakt.Nazwisko</td>
+                    @*<td>@sklep.TypSklepu.Typ</td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
