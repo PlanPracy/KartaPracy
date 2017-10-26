@@ -55,16 +55,16 @@
         [HttpPost]
         public ActionResult Save(Sklep sklep)
         {
-
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new SklepViewModel
-                {
-                    Sklep = sklep,
-                    Kontakts = _context.Kontakts.ToList()
-                };
-                return View("SklepFormularz", viewModel);
-            }
+            //dddd
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new SklepViewModel
+            //    {
+            //        Sklep = sklep,
+            //        Kontakts = _context.Kontakts.ToList()
+            //    };
+            //    return View("SklepFormularz", viewModel);
+            //}
             if (sklep.Id == 0)
             {
                 _context.Skleps.Add(sklep);
