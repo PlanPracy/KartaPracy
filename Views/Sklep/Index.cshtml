@@ -20,7 +20,7 @@
                 <tr>
                     <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new { id = sklep.Id }, null)</td>
                     <td>@sklep.Kontakt.Nazwisko</td>
-                    @*<td>@sklep.TypSklepu.Typ</td>*@
+                    <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
                 </tr>
             }
         </tbody>

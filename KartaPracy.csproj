@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KontaktController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SklepController.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,14 +215,56 @@
     <Compile Include="Migrations\201710240719333_ZmianaTypuSklepu.Designer.cs">
       <DependentUpon>201710240719333_ZmianaTypuSklepu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710261257322_zmienTYp6.cs" />
+    <Compile Include="Migrations\201710261257322_zmienTYp6.Designer.cs">
+      <DependentUpon>201710261257322_zmienTYp6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270623415_usuńFormatSklepu.cs" />
+    <Compile Include="Migrations\201710270623415_usuńFormatSklepu.Designer.cs">
+      <DependentUpon>201710270623415_usuńFormatSklepu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270628203_DodajTabeleFormatSklepu.cs" />
+    <Compile Include="Migrations\201710270628203_DodajTabeleFormatSklepu.Designer.cs">
+      <DependentUpon>201710270628203_DodajTabeleFormatSklepu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.cs" />
+    <Compile Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.Designer.cs">
+      <DependentUpon>201710270631156_DodajTabeleFormatSklepuDoSklepu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs" />
+    <Compile Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.Designer.cs">
+      <DependentUpon>201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs" />
+    <Compile Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.Designer.cs">
+      <DependentUpon>201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs" />
+    <Compile Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.Designer.cs">
+      <DependentUpon>201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.cs" />
+    <Compile Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.Designer.cs">
+      <DependentUpon>201710270645175_DodajTabeleFormatSklepuDoSklep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270647146_DodajNip.cs" />
+    <Compile Include="Migrations\201710270647146_DodajNip.Designer.cs">
+      <DependentUpon>201710270647146_DodajNip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270845135_DodajKontaktTelefonIMail.cs" />
+    <Compile Include="Migrations\201710270845135_DodajKontaktTelefonIMail.Designer.cs">
+      <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FormatSklepu.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kontakt.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Sklep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\KontaktViewModel.cs" />
     <Compile Include="ViewModels\SklepViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +327,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Kontakt\KontaktFormularz.cshtml" />
+    <Content Include="Views\Kontakt\Index.cshtml" />
     <None Include="Views\Sklep\Details.cshtml" />
     <None Include="Views\Sklep\Index.cshtml" />
     <None Include="Views\Sklep\SklepFormularz.cshtml" />
@@ -308,6 +353,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710240719333_ZmianaTypuSklepu.resx">
       <DependentUpon>201710240719333_ZmianaTypuSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710261257322_zmienTYp6.resx">
+      <DependentUpon>201710261257322_zmienTYp6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270623415_usuńFormatSklepu.resx">
+      <DependentUpon>201710270623415_usuńFormatSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270628203_DodajTabeleFormatSklepu.resx">
+      <DependentUpon>201710270628203_DodajTabeleFormatSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.resx">
+      <DependentUpon>201710270631156_DodajTabeleFormatSklepuDoSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.resx">
+      <DependentUpon>201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.resx">
+      <DependentUpon>201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.resx">
+      <DependentUpon>201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.resx">
+      <DependentUpon>201710270645175_DodajTabeleFormatSklepuDoSklep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270647146_DodajNip.resx">
+      <DependentUpon>201710270647146_DodajNip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270845135_DodajKontaktTelefonIMail.resx">
+      <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

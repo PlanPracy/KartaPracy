@@ -23,6 +23,8 @@ namespace KartaPracy.Models
         public DbSet<Sklep> Skleps { get; set; }
         public DbSet<Kontakt> Kontakts { get; set; }
 
+        public DbSet<FormatSklepu> FormatSklepus { get; set; }
+         
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

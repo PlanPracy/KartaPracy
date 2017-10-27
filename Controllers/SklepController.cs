@@ -1,5 +1,6 @@
 ﻿namespace KartaPracy.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
@@ -24,7 +25,7 @@
 
         public ActionResult Index()
         {
-            var sklepy = _context.Skleps.Include(s => s.Kontakt).ToList();
+            var sklepy = _context.Skleps.Include(s => s.Kontakt).Include(s=>s.FormatSklepu).ToList();
             return View(sklepy);
         }
 
@@ -39,32 +40,34 @@
         public ActionResult New()
         {
             var kontakt = _context.Kontakts.ToList();
-          
+            var format = _context.FormatSklepus.ToList();
 
             var viewModel = new SklepViewModel
             {
+                Sklep = new Sklep(),
                 Kontakts = kontakt,
-             
+                FormatSklepus = format
             };
-            
+
             return View("SklepFormularz", viewModel);
         }
 
-       
 
         [HttpPost]
         public ActionResult Save(Sklep sklep)
         {
-            //dddd
-            //if (!ModelState.IsValid)
-            //{
-            //    var viewModel = new SklepViewModel
-            //    {
-            //        Sklep = sklep,
-            //        Kontakts = _context.Kontakts.ToList()
-            //    };
-            //    return View("SklepFormularz", viewModel);
-            //}
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new SklepViewModel
+                {
+                    Sklep = sklep,
+                    Kontakts = _context.Kontakts.ToList(),
+                    FormatSklepus = _context.FormatSklepus.ToList()
+                };
+                return View("SklepFormularz", viewModel);
+            }
+
             if (sklep.Id == 0)
             {
                 _context.Skleps.Add(sklep);
@@ -74,7 +77,7 @@
                 var sklepInDb = _context.Skleps.Single(s => s.Id == sklep.Id);
                 sklepInDb.Nazwa = sklep.Nazwa;
                 sklepInDb.KontaktId = sklep.KontaktId;
-                //sklepInDb.TypSklepuId = sklep.TypSklepuId;
+                sklepInDb.FormatSklepuId = sklep.FormatSklepuId;
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Sklep");
@@ -90,7 +93,7 @@
             {
                 Sklep = sklep,
                 Kontakts = _context.Kontakts.ToList(),
-                
+                FormatSklepus = _context.FormatSklepus.ToList()
             };
             return View("SklepFormularz", viewModel);
         }

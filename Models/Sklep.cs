@@ -22,10 +22,11 @@ namespace KartaPracy.Models
 
         public byte KontaktId { get; set; }
 
-        
-        [Display(Name = "Jaki format sklepu")]
-        public string FormatSklep { get; set; }
+        public FormatSklepu FormatSklepu { get; set; }
+        public byte FormatSklepuId { get; set; }
 
-        public IEnumerable<SelectListItem> FormatSklepu { get; set; } 
-    }
+        public string Nip { get; set; }
+
+
+}
 }

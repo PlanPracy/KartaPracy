@@ -6,12 +6,15 @@ using System.Web;
 namespace KartaPracy.ViewModels
 {
     using Models;
+    using System.Web.Mvc;
 
     public class SklepViewModel
     {
-        public IEnumerable<Kontakt> Kontakts { get; set; }
-       
         
+
+        public IEnumerable<Kontakt> Kontakts { get; set; }
+        public IEnumerable<FormatSklepu> FormatSklepus { get; set; } 
+     
         public Sklep Sklep { get; set; }
 
         public string Tytul
@@ -23,5 +26,7 @@ namespace KartaPracy.ViewModels
                 return "Dodaj nowy sklep";
             }
         }
+
+        
     }
 }

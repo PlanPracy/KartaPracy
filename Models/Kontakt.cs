@@ -12,5 +12,14 @@ namespace KartaPracy.Models
         public byte Id { get; set; }
         [Required]
         public string Nazwisko { get; set; }
+
+        public string OsobaDoKontaktu { get; set; }
+
+        public string Telefon { get; set; }
+
+        public string Email { get; set; }
+
+        public string Opis { get; set; }
+
     }
 }
