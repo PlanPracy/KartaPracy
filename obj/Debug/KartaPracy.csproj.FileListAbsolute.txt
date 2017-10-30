@@ -94,3 +94,4 @@ C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajTabeleFormatSk
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajNip.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajKontaktTelefonIMail.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaKontaktId.resources

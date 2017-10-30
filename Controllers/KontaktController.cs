@@ -38,17 +38,39 @@ namespace KartaPracy.Controllers
             
         }
 
-
+        [HttpPost]
         public ActionResult Edit(byte id)
         {
-            throw new NotImplementedException();
+            var kontakt = _context.Kontakts.SingleOrDefault(c => c.Id == id);
+            if (kontakt == null)
+                return HttpNotFound();
+
+            var viewModel = new KontaktViewModel
+            {
+                Kontakt = kontakt
+            };
+            return View("KontaktFormularz", viewModel);
         }
 
+        [HttpPost]
         public ActionResult Save(Kontakt kontakt)
         {
+          
             if (kontakt.Id == 0)
             {
                 _context.Kontakts.Add(kontakt);
+            }
+            else
+            {
+                var kontaktInDb = _context.Kontakts.SingleOrDefault(k => k.Id == kontakt.Id);
+                if (kontaktInDb != null)
+                {
+                    kontaktInDb.Nazwisko = kontakt.Nazwisko;
+                    kontaktInDb.Email = kontakt.Email;
+                    kontaktInDb.Telefon = kontakt.Telefon;
+                    kontaktInDb.Opis = kontakt.Opis;
+                    kontaktInDb.OsobaDoKontaktu = kontakt.OsobaDoKontaktu;
+                }
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Kontakt");

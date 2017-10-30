@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201710270845135_DodajKontaktTelefonIMail.Designer.cs">
       <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710301017273_ZmianaKontaktId.cs" />
+    <Compile Include="Migrations\201710301017273_ZmianaKontaktId.Designer.cs">
+      <DependentUpon>201710301017273_ZmianaKontaktId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FormatSklepu.cs" />
@@ -383,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710270845135_DodajKontaktTelefonIMail.resx">
       <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710301017273_ZmianaKontaktId.resx">
+      <DependentUpon>201710301017273_ZmianaKontaktId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
