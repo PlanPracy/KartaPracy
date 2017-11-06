@@ -102,3 +102,4 @@ C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.xml
 C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.dll
 C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.xml
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache

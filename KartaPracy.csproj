@@ -286,6 +286,7 @@
     <Compile Include="Models\Kontakt.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Sklep.cs" />
+    <Compile Include="Models\Zdarzenie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\KontaktViewModel.cs" />
