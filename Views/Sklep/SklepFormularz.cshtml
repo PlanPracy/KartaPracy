@@ -23,7 +23,7 @@
     <div class="form-group">
         
         @Html.LabelFor(s => s.Sklep.KontaktId)
-        <p>@Html.ActionLink("Jeśli nie ma na liście dodaj nową osobę", "New", "Kontakt", null, new { @class = "btn btn-primary" })</p>
+        @Html.ActionLink("Jeśli nie ma na liście dodaj nową osobę", "New", "Kontakt", null, new { @class = "btn btn-primary" })
         @Html.DropDownListFor(s => s.Sklep.KontaktId, new SelectList(Model.Kontakts, "Id", "Nazwisko"), "Wybierz osobę do kontaktu", new {@class = "form-control"})
         @Html.ValidationMessageFor(s => s.Sklep.KontaktId)
     </div>

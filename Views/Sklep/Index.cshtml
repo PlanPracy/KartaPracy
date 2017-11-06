@@ -5,7 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
     <h2>Sklepy</h2>
-    <p>@Html.ActionLink("Dodaj sklep", "New", "Sklep", null, new { @class = "btn btn-primary" })</p>
+<p>@Html.ActionLink("Dodaj sklep", "New", "Sklep", null, new {@class = "btn btn-primary"})</p>
+
+@if (!Model.Any())
+{
+    <p>Nie ma żadnego sklepu</p>
+}
+else
+{ 
 <table id="sklep" class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -27,20 +34,23 @@
         }
     </tbody>
 </table>
+}
 @section scripts
 {
     <script>
         $(document).ready(function() {
+          var table=  $("#sklep").DataTable();
 
             $("#sklep").on("click", ".js-delete", function () {
                 var button = $(this);
+
                 bootbox.confirm("Czy na pewno chcesz usunąć sklep?", function(result) {
                     if (result) {
                         $.ajax({
                             url: "/api/sklep/" + button.attr("data-sklep-id"),
                             method: "DELETE",
                             success: function () {
-                                button.parents("tr").remove();
+                                table.row(button.parents("tr")).remove().draw();
                             }
                         });
                     }
