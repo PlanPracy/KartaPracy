@@ -1,6 +1,7 @@
 ﻿@model System.Collections.Generic.List<KartaPracy.Models.Kontakt>
 
 @{
+    ViewBag.Title = "Kontakty";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,7 +13,9 @@
     </head>
     <body>
         <div>
-            <p>@Html.ActionLink("Dodaj nową osobę do kontaktu/ właścicela sklepu", "New", "Kontakt", null, new { @class = "btn btn-primary" })</p>
+
+            <h2>Sklepy</h2>
+            <p>@Html.ActionLink("Dodaj nową osobę do kontaktu/ właścicela sklepu", "New", "Kontakt", null, new {@class = "btn btn-primary"})</p>
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -23,9 +26,9 @@
                 </thead>
                 <tbody>
                     @foreach (var kontakt in Model)
-            {
+                    {
                         <tr>
-                            <td>@Html.ActionLink(kontakt.Nazwisko, "Edit", "Kontakt", new { id = kontakt.Id }, null)</td>
+                            <td>@Html.ActionLink(kontakt.Nazwisko, "Edit", "Kontakt", new {id = kontakt.Id}, null)</td>
                             <td>@kontakt.Telefon</td>
                             <td>@kontakt.Email</td>
                         </tr>

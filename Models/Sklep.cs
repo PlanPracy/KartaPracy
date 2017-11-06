@@ -20,7 +20,8 @@ namespace KartaPracy.Models
 
         public Kontakt Kontakt { get; set; }
 
-        public byte KontaktId { get; set; }
+
+        public byte? KontaktId { get; set; }
 
         public FormatSklepu FormatSklepu { get; set; }
         public byte FormatSklepuId { get; set; }
