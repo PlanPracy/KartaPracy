@@ -1,7 +1,7 @@
 ﻿@model System.Collections.Generic.List<KartaPracy.Models.Sklep>
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Sklepy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
     <h2>Sklepy</h2>
@@ -32,17 +32,20 @@
     <script>
         $(document).ready(function() {
 
-            $("#sklep .js-delete").on("click", function() {
-                if (confirm("Czy na pewno chcesz usunąć sklep?")) {
-                    var button = $(this);
-                   $.ajax({
-                       url: "/api/sklep/" + button.attr("data-sklep-id"),
-                       method: "DELETE",
-                       success: function() {
-                           button.parents("tr").remove();
-                       }
-                   });
-               }
+            $("#sklep").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Czy na pewno chcesz usunąć sklep?", function(result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/sklep/" + button.attr("data-sklep-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+              
             });
 
         });
