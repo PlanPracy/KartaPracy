@@ -93,4 +93,13 @@ C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajTabeleFormatSk
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajTabeleFormatSklepuDoSklep.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajNip.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajKontaktTelefonIMail.resources
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.two.resources
+C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.xml
+C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.dll
+C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.xml
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache

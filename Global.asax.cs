@@ -8,10 +8,16 @@ using System.Web.Routing;
 
 namespace KartaPracy
 {
+    using System.Web.Http;
+    using App_Start;
+    using AutoMapper;
+
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
+            Mapper.Initialize(c => c.AddProfile<MappingProfile>());
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -9,6 +9,7 @@ namespace KartaPracy.Models
 
     public class Kontakt
     {
+        [Key]
         public byte Id { get; set; }
         [Required]
         public string Nazwisko { get; set; }

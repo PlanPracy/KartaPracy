@@ -6,22 +6,48 @@
 }
     <h2>Sklepy</h2>
     <p>@Html.ActionLink("Dodaj sklep", "New", "Sklep", null, new { @class = "btn btn-primary" })</p>
-    <table class="table table-bordered table-hover">
-        <thead>
+<table id="sklep" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Sklep</th>
+            <th>Kontakt</th>
+            <th>Typ sklepu</th>
+            <th>Usuń</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sklep in Model)
+        {
             <tr>
-                <th>Sklep</th>
-                <th>Kontakt</th>
-                <th>Typ sklepu</th>
+                <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new {id = sklep.Id}, null)</td>
+                <td>@sklep.Kontakt.Nazwisko</td>
+                <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
+                <td><button data-sklep-id="@sklep.Id" class="btn-link js-delete">Delete</button></td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var sklep in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new { id = sklep.Id }, null)</td>
-                    <td>@sklep.Kontakt.Nazwisko</td>
-                    <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+
+            $("#sklep .js-delete").on("click", function() {
+                if (confirm("Czy na pewno chcesz usunąć sklep?")) {
+                    var button = $(this);
+                   $.ajax({
+                       url: "/api/sklep/" + button.attr("data-sklep-id"),
+                       method: "DELETE",
+                       success: function() {
+                           button.parents("tr").remove();
+                       }
+                   });
+               }
+            });
+
+        });
+</script>
+       
+
+  
+}
