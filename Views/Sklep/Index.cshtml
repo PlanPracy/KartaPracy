@@ -19,17 +19,17 @@ else
             <th>Sklep</th>
             <th>Kontakt</th>
             <th>Typ sklepu</th>
-            <th>Usuń</th>
+            <th>Akcja</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var sklep in Model)
         {
             <tr>
-                <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new {id = sklep.Id}, null)</td>
+                <td>@Html.ActionLink(sklep.Nazwa, "Details", "Sklep", new {id = sklep.Id}, null)</td>
                 <td>@sklep.Kontakt.Nazwisko</td>
                 <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
-                <td><button data-sklep-id="@sklep.Id" class="btn-link js-delete">Delete</button></td>
+                <td><button data-sklep-id="@sklep.Id" class="btn-link js-delete">Delete</button>@Html.ActionLink("Edytuj", "Edit", "Sklep", new { id = sklep.Id }, null)</td>
             </tr>
         }
     </tbody>

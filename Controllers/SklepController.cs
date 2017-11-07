@@ -31,7 +31,7 @@
 
         public ActionResult Details(int id)
         {
-            var sklep = _context.Skleps.SingleOrDefault(c => c.Id == id);
+            var sklep = _context.Skleps.Include(c=>c.FormatSklepu).Include(c=>c.Kontakt).SingleOrDefault(c => c.Id == id);
             if (sklep == null)
                 HttpNotFound();
             return View(sklep);

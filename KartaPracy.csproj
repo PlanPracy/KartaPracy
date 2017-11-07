@@ -48,6 +48,14 @@
       <HintPath>..\packages\AutoMapper.4.1.0\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -159,12 +167,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -216,6 +218,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\SklepController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KartaKontaktuController.cs" />
     <Compile Include="Controllers\KontaktController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SklepController.cs" />
@@ -279,6 +282,14 @@
     <Compile Include="Migrations\201711021244145_two.Designer.cs">
       <DependentUpon>201711021244145_two.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711070756018_AddPostClass.cs" />
+    <Compile Include="Migrations\201711070756018_AddPostClass.Designer.cs">
+      <DependentUpon>201711070756018_AddPostClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711070757348_AddKarta.cs" />
+    <Compile Include="Migrations\201711070757348_AddKarta.Designer.cs">
+      <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FormatSklepu.cs" />
@@ -289,6 +300,7 @@
     <Compile Include="Models\Sklep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\KartaKontaktuViewModel.cs" />
     <Compile Include="ViewModels\KontaktViewModel.cs" />
     <Compile Include="ViewModels\SklepViewModel.cs" />
   </ItemGroup>
@@ -531,6 +543,7 @@
     <Content Include="Views\Kontakt\KontaktFormularz.cshtml" />
     <Content Include="Views\Kontakt\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <None Include="Views\KartaKontaktu\Index.cshtml" />
     <None Include="Views\Sklep\Details.cshtml" />
     <None Include="Views\Sklep\Index.cshtml" />
     <None Include="Views\Sklep\SklepFormularz.cshtml" />
@@ -588,6 +601,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711021244145_two.resx">
       <DependentUpon>201711021244145_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711070756018_AddPostClass.resx">
+      <DependentUpon>201711070756018_AddPostClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711070757348_AddKarta.resx">
+      <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
