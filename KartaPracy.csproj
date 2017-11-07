@@ -290,6 +290,10 @@
     <Compile Include="Migrations\201711070757348_AddKarta.Designer.cs">
       <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711070950150_AddKartaZIDSklep.cs" />
+    <Compile Include="Migrations\201711070950150_AddKartaZIDSklep.Designer.cs">
+      <DependentUpon>201711070950150_AddKartaZIDSklep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FormatSklepu.cs" />
@@ -544,6 +548,7 @@
     <Content Include="Views\Kontakt\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <None Include="Views\KartaKontaktu\Index.cshtml" />
+    <Content Include="Views\KartaKontaktu\ZdarzenieFormularz.cshtml" />
     <None Include="Views\Sklep\Details.cshtml" />
     <None Include="Views\Sklep\Index.cshtml" />
     <None Include="Views\Sklep\SklepFormularz.cshtml" />
@@ -607,6 +612,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711070757348_AddKarta.resx">
       <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711070950150_AddKartaZIDSklep.resx">
+      <DependentUpon>201711070950150_AddKartaZIDSklep.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

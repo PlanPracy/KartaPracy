@@ -1,4 +1,4 @@
-﻿@model dynamic
+﻿@model System.Collections.Generic.List<KartaPracy.Models.KartaKontaktu>
 
 @{
     ViewBag.Title = "Karta Pracy";
@@ -6,3 +6,39 @@
 }
 
 <h2>Plan Pracy </h2>
+
+<p>@Html.ActionLink("Dodaj nowe zdarzenie", "New", "KartaKontaktu", null, new { @class = "btn btn-primary" })</p>
+
+@if (!Model.Any())
+{
+    <p>Nie ma żadnego zdarzenia</p>
+}
+else
+{
+    <table id="zdarzenie" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sklep</th>
+                <th>Data</th>
+                <th>Forma kontaktu</th>
+                <th>Notatki</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var zdarzenie in Model)
+            {
+                <tr>
+                    <td>@zdarzenie.Id</td>
+                            <td>@zdarzenie.Sklep.Nazwa</td>
+                            <td>@zdarzenie.DataSpotkania</td>
+                            <td>@zdarzenie.FormaKontaktu</td>
+                            <td>@zdarzenie.Notatki</td>
+                            <td><button data-sklep-id="@zdarzenie.Id" class="btn-link js-delete">Delete</button>@Html.ActionLink("Edytuj", "Edit", "KartaKontaktu", new { id = zdarzenie.Id }, null)
+                       
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -11,5 +11,15 @@ namespace KartaPracy.ViewModels
     {
         public IEnumerable<Sklep> Skleps { get; set; }
         public KartaKontaktu KartaKontaktu { get; set; }
+
+        public string Tytul
+        {
+            get
+            {
+                if (KartaKontaktu != null && KartaKontaktu.Id != 0)
+                    return "Edytuj dane o zdarzeniu";
+                return "Dodaj nowe zdarzenie";
+            }
+        }
     }
 }

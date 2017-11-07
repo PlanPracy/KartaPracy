@@ -1,0 +1,25 @@
+﻿@model KartaPracy.ViewModels.KartaKontaktuViewModel
+
+@{
+    ViewBag.Title = Model.Tytul;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Tytul</h2>
+@using (@Html.BeginForm("Save", "KartaKontaktu"))
+{
+    <div class="form-group">
+        @Html.LabelFor(s => s.KartaKontaktu.Id)
+
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(s => s.KartaKontaktu.SklepId)
+       
+        @Html.DropDownListFor(s => s.KartaKontaktu.SklepId, new SelectList(Model.Skleps, "Id", "Nazwa"), "Wybierz sklep", new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.KartaKontaktu.Id)
+    </div>
+    @Html.HiddenFor(s => s.KartaKontaktu.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
