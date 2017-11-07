@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace KartaPracy.Controllers
 {
@@ -26,7 +27,7 @@ namespace KartaPracy.Controllers
         // GET: KartaKontaktu
         public ActionResult Index()
         {
-            var plan = _context.KartaKontaktus.ToList();
+            var plan = _context.KartaKontaktus.Include(c=>c.Sklep).ToList();
             return View(plan);
         }
 
@@ -37,6 +38,7 @@ namespace KartaPracy.Controllers
             {
                 KartaKontaktu = new KartaKontaktu(),
                 Skleps = sklepy
+                
             };
             return View("ZdarzenieFormularz", viewModel);
         }

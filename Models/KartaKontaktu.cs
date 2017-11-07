@@ -12,6 +12,7 @@ namespace KartaPracy.Models
         public Sklep Sklep { get; set; }
 
         public int SklepId { get; set; }
+
         public DateTime DataSpotkania { get; set; }
 
         public string FormaKontaktu { get; set; }
