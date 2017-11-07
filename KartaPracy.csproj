@@ -283,6 +283,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FormatSklepu.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KartaKontaktu.cs" />
     <Compile Include="Models\Kontakt.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Sklep.cs" />

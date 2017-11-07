@@ -13,6 +13,7 @@ namespace KartaPracy.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         [StringLength(255)]
         public string Nazwa { get; set; }
@@ -26,7 +27,5 @@ namespace KartaPracy.Models
         public byte FormatSklepuId { get; set; }
 
         public string Nip { get; set; }
-
-
-}
+    }
 }
