@@ -5,6 +5,9 @@ using System.Web;
 
 namespace KartaPracy.Models
 {
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public class KartaKontaktu
     {
         public int Id { get; set; }
@@ -13,6 +16,8 @@ namespace KartaPracy.Models
 
         public int SklepId { get; set; }
 
+        [DisplayName("Data i godzina spotkania")]
+        [DataType(DataType.Date)]
         public DateTime DataSpotkania { get; set; }
 
         public string FormaKontaktu { get; set; }

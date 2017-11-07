@@ -6,13 +6,14 @@
     <title>@ViewBag.Title - Plan Pracy</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
 
-</head>
+</head> 
 <body>
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <hr/>
         <footer>
             <p>&copy; @DateTime.Now.Year - Plan Pracy</p>
         </footer>
@@ -20,6 +21,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/lib")
+   
+    @Scripts.Render("~/bundles/datetime")
     @RenderSection("scripts", required: false)
+
+    
 </body>
 </html>

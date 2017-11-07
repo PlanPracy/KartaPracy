@@ -1,37 +1,70 @@
 ﻿@model KartaPracy.ViewModels.KartaKontaktuViewModel
 
+
 @{
     ViewBag.Title = Model.Tytul;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Tytul</h2>
-@using (@Html.BeginForm("Save", "KartaKontaktu"))
-{
-    <div class="form-group">
-        @Html.LabelFor(s => s.KartaKontaktu.Id)
 
-    </div>
+<!DOCTYPE html>
 
-    <div class="form-group">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+   
+   
+</head>
+<body>
 
-        @Html.LabelFor(s => s.KartaKontaktu.SklepId)
+  
 
-        @Html.DropDownListFor(s => s.KartaKontaktu.SklepId, new SelectList(Model.Skleps, "Id", "Nazwa"), "Wybierz sklep", new {@class = "form-control"})
-        @Html.ValidationMessageFor(s => s.KartaKontaktu.Id)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.KartaKontaktu.DataSpotkania)
-        @Html.TextBoxFor(m => m.KartaKontaktu.DataSpotkania, "{0:d MMM yyyy}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.KartaKontaktu.DataSpotkania)
-    </div>
+    <h2>@Model.Tytul</h2>
+    @using (@Html.BeginForm("Save", "KartaKontaktu"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(s => s.KartaKontaktu.Id)
+
+        </div>
+
+        <div class="form-group">
+
+            @Html.LabelFor(s => s.KartaKontaktu.SklepId)
+
+            @Html.DropDownListFor(s => s.KartaKontaktu.SklepId, new SelectList(Model.Skleps, "Id", "Nazwa"), "Wybierz sklep", new { @class = "form-control" })
+            @Html.ValidationMessageFor(s => s.KartaKontaktu.Id)
+        </div>
 
 
-    <div class="form-group">
-        @Html.LabelFor(s => s.KartaKontaktu.Notatki)
-        @Html.TextBoxFor(s => s.KartaKontaktu.Notatki, new {@class = "form-control"})
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.KartaKontaktu.DataSpotkania)
+            @Html.EditorFor(m => m.KartaKontaktu.DataSpotkania, new {htmlAttributes= new { @class = "datepicker" }})
+            @Html.ValidationMessageFor(m => m.KartaKontaktu.DataSpotkania)
+        </div>
 
-    @Html.HiddenFor(s => s.KartaKontaktu.Id)
-    <button type="submit" class="btn btn-primary">Save</button>
-}
+
+        <div class="form-group">
+            @Html.LabelFor(s => s.KartaKontaktu.Notatki)
+            @Html.TextBoxFor(s => s.KartaKontaktu.Notatki, new { @class = "form-control" })
+        </div>
+
+        @Html.HiddenFor(s => s.KartaKontaktu.Id)
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet"/>
+    @section scripts
+    {
+
+        <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+        <script>
+
+            $(function () {
+                $(".datepicker").datepicker();
+            });
+        </script>
+    }
+</body>
+</html>
+
