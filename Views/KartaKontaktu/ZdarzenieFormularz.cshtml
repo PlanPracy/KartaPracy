@@ -58,12 +58,18 @@
     {
 
         <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
-        <script>
-
-            $(function () {
+        @*<script>
+            $(function() {
                 $(".datepicker").datepicker();
             });
-        </script>
+        </script>*@
+    <script type="text/javascript">
+            $(function () {
+                $('#datepicker').datetimepicker({
+                    locale: 'ru'
+                });
+            });
+    </script>
     }
 </body>
 </html>

@@ -226,7 +226,7 @@
     <Compile Include="Controllers\KontaktController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SklepController.cs" />
-    <Compile Include="Dtos\SklepDto.cs" />
+    <Compile Include="fonts\Dtos\SklepDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
