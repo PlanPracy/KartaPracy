@@ -105,4 +105,5 @@ C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.AddKartaZIDSklep.re
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.dll
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.pdb
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.JakiesZmiany.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache

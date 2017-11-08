@@ -26,8 +26,9 @@ namespace KartaPracy.Models
         [Display(Name = "Sklep")]
         public int SklepId { get; set; }
 
+        [Required]
         [Display(Name = "Data i godzina spotkania")]
-        [DataType((DataType) DataType.DateTime)]
+        [DataType((DataType) DataType.Date)]
         public DateTime DataSpotkania { get; set; }
 
 
@@ -35,6 +36,7 @@ namespace KartaPracy.Models
         public string FormaKontaktu { get; set; }
 
         [Display(Name = "Notatki")]
+        [StringLength(512, ErrorMessage = "Maksymalnie mozesz podac 512 znaków ")]
         public string Notatki { get; set; }
     }
 }

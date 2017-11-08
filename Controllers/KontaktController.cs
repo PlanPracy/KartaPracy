@@ -58,7 +58,14 @@ namespace KartaPracy.Controllers
         public ActionResult Save(Kontakt kontakt)
         {
             var obecnyKontaktId = 1;
-            
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new KontaktViewModel
+                {
+                    Kontakt = kontakt
+                };
+                return View("KontaktFormularz", viewModel);
+            }
 
             if (_context1.Kontakts.Any())
             {

@@ -42,25 +42,42 @@ namespace KartaPracy.Controllers
             return View("ZdarzenieFormularz", viewModel);
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            throw new NotImplementedException();
+            var kartaKontaktu = _context.KartaKontaktus.SingleOrDefault(c => c.Id == id);
+            if (kartaKontaktu == null)
+                return HttpNotFound();
+
+            var viewModel = new KartaKontaktuViewModel
+            {
+                KartaKontaktu = kartaKontaktu,
+                Skleps = _context.Skleps.ToList()
+            };
+            return View("ZdarzenieFormularz", viewModel);
         }
 
         public ActionResult Save(KartaKontaktu kartaKontaktu)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    var viewModel = new KartaKontaktuViewModel
-            //    {
-            //        KartaKontaktu = kartaKontaktu,
-            //        Skleps = _context.Skleps.ToList()
-            //    };
-            //    return View("ZdarzenieFormularz", viewModel);
-            //}
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new KartaKontaktuViewModel
+                {
+                    KartaKontaktu = kartaKontaktu,
+                    Skleps = _context.Skleps.ToList()
+                };
+                return View("ZdarzenieFormularz", viewModel);
+            }
             if (kartaKontaktu.Id == 0)
             {
                 _context.KartaKontaktus.Add(kartaKontaktu);
+            }
+            else
+            {
+                var kartaInDb = _context.KartaKontaktus.Single(s => s.Id == kartaKontaktu.Id);
+                kartaInDb.DataSpotkania = kartaKontaktu.DataSpotkania;
+                kartaInDb.SklepId = kartaKontaktu.SklepId;
+                kartaInDb.FormaKontaktu = kartaKontaktu.FormaKontaktu;
+                kartaInDb.Notatki = kartaKontaktu.Notatki;
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "KartaKontaktu");
