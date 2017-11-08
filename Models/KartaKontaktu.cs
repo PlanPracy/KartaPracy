@@ -18,18 +18,23 @@ namespace KartaPracy.Models
            DataSpotkania = date; 
         }
 
+        [Display(Name = "Nr zdarzenia")]
         public int Id { get; set; }
 
         public Sklep Sklep { get; set; }
 
+        [Display(Name = "Sklep")]
         public int SklepId { get; set; }
 
-        [DisplayName("Data i godzina spotkania")]
-        [DataType(DataType.Date)]
+        [Display(Name = "Data i godzina spotkania")]
+        [DataType((DataType) DataType.DateTime)]
         public DateTime DataSpotkania { get; set; }
 
+
+        [Display(Name = "Forma kontaktu")]
         public string FormaKontaktu { get; set; }
 
+        [Display(Name = "Notatki")]
         public string Notatki { get; set; }
     }
 }

@@ -38,7 +38,6 @@ namespace KartaPracy.Controllers
             {
                 KartaKontaktu = new KartaKontaktu(),
                 Skleps = sklepy
-                
             };
             return View("ZdarzenieFormularz", viewModel);
         }
@@ -50,6 +49,15 @@ namespace KartaPracy.Controllers
 
         public ActionResult Save(KartaKontaktu kartaKontaktu)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new KartaKontaktuViewModel
+            //    {
+            //        KartaKontaktu = kartaKontaktu,
+            //        Skleps = _context.Skleps.ToList()
+            //    };
+            //    return View("ZdarzenieFormularz", viewModel);
+            //}
             if (kartaKontaktu.Id == 0)
             {
                 _context.KartaKontaktus.Add(kartaKontaktu);
