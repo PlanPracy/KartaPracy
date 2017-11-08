@@ -10,6 +10,14 @@ namespace KartaPracy.Models
 
     public class KartaKontaktu
     {
+        public KartaKontaktu()
+
+        {
+           var date= DateTime.Now.ToLocalTime();
+
+           DataSpotkania = date; 
+        }
+
         public int Id { get; set; }
 
         public Sklep Sklep { get; set; }
