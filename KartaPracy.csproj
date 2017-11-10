@@ -84,10 +84,6 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -234,77 +230,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710240600067_DodajSklep.cs" />
-    <Compile Include="Migrations\201710240600067_DodajSklep.Designer.cs">
-      <DependentUpon>201710240600067_DodajSklep.cs</DependentUpon>
+    <Compile Include="Migrations\201711101125535_TworzenieTabeli.cs" />
+    <Compile Include="Migrations\201711101125535_TworzenieTabeli.Designer.cs">
+      <DependentUpon>201711101125535_TworzenieTabeli.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710240639127_add.cs" />
-    <Compile Include="Migrations\201710240639127_add.Designer.cs">
-      <DependentUpon>201710240639127_add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710240719333_ZmianaTypuSklepu.cs" />
-    <Compile Include="Migrations\201710240719333_ZmianaTypuSklepu.Designer.cs">
-      <DependentUpon>201710240719333_ZmianaTypuSklepu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710261257322_zmienTYp6.cs" />
-    <Compile Include="Migrations\201710261257322_zmienTYp6.Designer.cs">
-      <DependentUpon>201710261257322_zmienTYp6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270623415_usuńFormatSklepu.cs" />
-    <Compile Include="Migrations\201710270623415_usuńFormatSklepu.Designer.cs">
-      <DependentUpon>201710270623415_usuńFormatSklepu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270628203_DodajTabeleFormatSklepu.cs" />
-    <Compile Include="Migrations\201710270628203_DodajTabeleFormatSklepu.Designer.cs">
-      <DependentUpon>201710270628203_DodajTabeleFormatSklepu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.cs" />
-    <Compile Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.Designer.cs">
-      <DependentUpon>201710270631156_DodajTabeleFormatSklepuDoSklepu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs" />
-    <Compile Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.Designer.cs">
-      <DependentUpon>201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs" />
-    <Compile Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.Designer.cs">
-      <DependentUpon>201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs" />
-    <Compile Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.Designer.cs">
-      <DependentUpon>201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.cs" />
-    <Compile Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.Designer.cs">
-      <DependentUpon>201710270645175_DodajTabeleFormatSklepuDoSklep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270647146_DodajNip.cs" />
-    <Compile Include="Migrations\201710270647146_DodajNip.Designer.cs">
-      <DependentUpon>201710270647146_DodajNip.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710270845135_DodajKontaktTelefonIMail.cs" />
-    <Compile Include="Migrations\201710270845135_DodajKontaktTelefonIMail.Designer.cs">
-      <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711021244145_two.cs" />
-    <Compile Include="Migrations\201711021244145_two.Designer.cs">
-      <DependentUpon>201711021244145_two.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711070756018_AddPostClass.cs" />
-    <Compile Include="Migrations\201711070756018_AddPostClass.Designer.cs">
-      <DependentUpon>201711070756018_AddPostClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711070757348_AddKarta.cs" />
-    <Compile Include="Migrations\201711070757348_AddKarta.Designer.cs">
-      <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711070950150_AddKartaZIDSklep.cs" />
-    <Compile Include="Migrations\201711070950150_AddKartaZIDSklep.Designer.cs">
-      <DependentUpon>201711070950150_AddKartaZIDSklep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711081246165_JakiesZmiany.cs" />
-    <Compile Include="Migrations\201711081246165_JakiesZmiany.Designer.cs">
-      <DependentUpon>201711081246165_JakiesZmiany.cs</DependentUpon>
+    <Compile Include="Migrations\201711101257038_DodanieAdresuDoSklepu.cs" />
+    <Compile Include="Migrations\201711101257038_DodanieAdresuDoSklepu.Designer.cs">
+      <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -698,59 +630,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710240600067_DodajSklep.resx">
-      <DependentUpon>201710240600067_DodajSklep.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711101125535_TworzenieTabeli.resx">
+      <DependentUpon>201711101125535_TworzenieTabeli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710240639127_add.resx">
-      <DependentUpon>201710240639127_add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710240719333_ZmianaTypuSklepu.resx">
-      <DependentUpon>201710240719333_ZmianaTypuSklepu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710261257322_zmienTYp6.resx">
-      <DependentUpon>201710261257322_zmienTYp6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270623415_usuńFormatSklepu.resx">
-      <DependentUpon>201710270623415_usuńFormatSklepu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270628203_DodajTabeleFormatSklepu.resx">
-      <DependentUpon>201710270628203_DodajTabeleFormatSklepu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270631156_DodajTabeleFormatSklepuDoSklepu.resx">
-      <DependentUpon>201710270631156_DodajTabeleFormatSklepuDoSklepu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270635283_DodajTabeleFormatSklepuDoSklepu1.resx">
-      <DependentUpon>201710270635283_DodajTabeleFormatSklepuDoSklepu1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270636343_DodajTabeleFormatSklepuDoSklepu2.resx">
-      <DependentUpon>201710270636343_DodajTabeleFormatSklepuDoSklepu2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270638599_DodajTabeleFormatSklepuDoSklepu2a.resx">
-      <DependentUpon>201710270638599_DodajTabeleFormatSklepuDoSklepu2a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270645175_DodajTabeleFormatSklepuDoSklep.resx">
-      <DependentUpon>201710270645175_DodajTabeleFormatSklepuDoSklep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270647146_DodajNip.resx">
-      <DependentUpon>201710270647146_DodajNip.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710270845135_DodajKontaktTelefonIMail.resx">
-      <DependentUpon>201710270845135_DodajKontaktTelefonIMail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711021244145_two.resx">
-      <DependentUpon>201711021244145_two.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711070756018_AddPostClass.resx">
-      <DependentUpon>201711070756018_AddPostClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711070757348_AddKarta.resx">
-      <DependentUpon>201711070757348_AddKarta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711070950150_AddKartaZIDSklep.resx">
-      <DependentUpon>201711070950150_AddKartaZIDSklep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711081246165_JakiesZmiany.resx">
-      <DependentUpon>201711081246165_JakiesZmiany.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711101257038_DodanieAdresuDoSklepu.resx">
+      <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -781,13 +665,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -70,6 +70,7 @@
 
             if (sklep.Id == 0)
             {
+                sklep.DataUtworzeniaSklepu = DateTime.Now;
                 _context.Skleps.Add(sklep);
             }
             else

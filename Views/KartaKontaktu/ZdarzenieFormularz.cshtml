@@ -34,10 +34,10 @@
             @Html.LabelFor(s => s.KartaKontaktu.DataSpotkania)
             <div class="input-group timeText" id="datetime1">
 
-                @Html.EditorFor(model => model.KartaKontaktu.DataSpotkania, new {htmlAttributes = new {@class = "form-control starttimecss"}})
-                <span class="input-group-addon text-pointer">
-                    <span class="glyphicon glyphicon-time"></span>
-                </span>
+                @Html.TextBoxFor(model => model.KartaKontaktu.DataSpotkania, new {htmlAttributes = new {@class = "form-control starttimecss"}})
+                <div class="input-group-addon text-pointer">
+                    <div class="glyphicon glyphicon-time"></div>
+                </div>
             </div>
             @Html.ValidationMessageFor(s => s.KartaKontaktu.DataSpotkania)
         </div>
@@ -51,6 +51,7 @@
         <div class="form-group">
             @Html.LabelFor(s => s.KartaKontaktu.Notatki)
             @Html.TextAreaFor(s => s.KartaKontaktu.Notatki, new { @class = "form-control" })
+            @Html.ValidationMessageFor(s => s.KartaKontaktu.Notatki)
         </div>
         <br />
             @Html.HiddenFor(s => s.KartaKontaktu.Id)

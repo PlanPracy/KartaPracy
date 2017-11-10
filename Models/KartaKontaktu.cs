@@ -13,7 +13,7 @@ namespace KartaPracy.Models
         public KartaKontaktu()
 
         {
-           var date= DateTime.Now.ToLocalTime();
+            var date = DateTime.Now;
 
            DataSpotkania = date; 
         }
@@ -28,7 +28,7 @@ namespace KartaPracy.Models
 
         [Required]
         [Display(Name = "Data i godzina spotkania")]
-        [DataType((DataType) DataType.Date)]
+        [DataType((DataType) DataType.DateTime)]
         public DateTime DataSpotkania { get; set; }
 
 
