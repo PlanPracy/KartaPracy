@@ -7,6 +7,11 @@ using System.Data.Entity;
 
 namespace KartaPracy.Controllers
 {
+    using System.Configuration;
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.IO;
+    using ClosedXML.Excel;
     using Models;
     using ViewModels;
 
@@ -30,6 +35,60 @@ namespace KartaPracy.Controllers
             var plan = _context.KartaKontaktus.Include(c=>c.Sklep).ToList();
             return View(plan);
         }
+
+        public ActionResult ExportData()
+        {
+            String constring = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                string query = "select * From KartaKontaktus";
+                DataTable dt = new DataTable();
+                dt.TableName = "KartaKOntaktus";
+            
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.Fill(dt);
+                con.Close();
+
+                using (XLWorkbook wb = new XLWorkbook())
+                {
+                    wb.Worksheets.Add(dt);
+                    wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                    wb.Style.Font.Bold = true;
+
+                    Response.Clear();
+                    Response.Buffer = true;
+                    Response.Charset = "";
+                    Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                    Response.AddHeader("content-disposition", "attachment;filename= KartaPracyRaport.xlsx");
+
+                    using (MemoryStream MyMemoryStream = new MemoryStream())
+                    {
+                        wb.SaveAs(MyMemoryStream);
+                        MyMemoryStream.WriteTo(Response.OutputStream);
+                        Response.Flush();
+                        Response.End();
+                    }
+                }
+                return RedirectToAction("Index", "KartaKontaktu");
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch
+            {
+                obj = null;
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+    
 
         public ActionResult New()
         {

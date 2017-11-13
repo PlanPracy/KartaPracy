@@ -1,0 +1,38 @@
+﻿@using KartaPracy.Models
+@model KartaPracy.ViewModels.KontaktViewModel
+
+@{
+    ViewBag.Title = "KontaktFormularz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>@Model.Tytul</h2>
+@using (@Html.BeginForm("Save", "Kontakt"))
+{
+    <div class="form-group">
+        @Html.LabelFor(s => s.Kontakt.Nazwisko)
+        @Html.TextBoxFor(s => s.Kontakt.Nazwisko, new {@class = "form-control"})
+        @Html.ValidationMessageFor(s => s.Kontakt.Nazwisko)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(s => s.Kontakt.Telefon)
+        @Html.TextBoxFor(s => s.Kontakt.Telefon, new {@class = "form-control"})
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(s => s.Kontakt.Email)
+        @Html.TextBoxFor(s => s.Kontakt.Email, new {@class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Kontakt.Opis)
+        @Html.TextBoxFor(s => s.Kontakt.Opis, new {@class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Kontakt.OsobaDoKontaktu)
+        @Html.TextBoxFor(s => s.Kontakt.OsobaDoKontaktu, new {@class = "form-control"})
+    </div>
+    @Html.HiddenFor(s => s.Kontakt.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}

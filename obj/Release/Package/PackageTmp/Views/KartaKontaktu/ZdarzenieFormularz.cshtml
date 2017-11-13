@@ -1,0 +1,77 @@
+﻿@model KartaPracy.ViewModels.KartaKontaktuViewModel
+
+
+@{
+    ViewBag.Title = Model.Tytul;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-datetimepicker.*js"></script>
+ </head>
+<body>
+
+
+
+    <h2>@Model.Tytul</h2>
+    @using (@Html.BeginForm("Save", "KartaKontaktu"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(s => s.KartaKontaktu.SklepId)
+            @Html.DropDownListFor(s => s.KartaKontaktu.SklepId, new SelectList(Model.Skleps, "Id", "Nazwa"), "Wybierz sklep", new { @class = "form-control" })
+            @Html.ValidationMessageFor(s => s.KartaKontaktu.SklepId)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(s => s.KartaKontaktu.DataSpotkania)
+            <div class="input-group timeText" id="datetime1">
+
+                @Html.TextBoxFor(model => model.KartaKontaktu.DataSpotkania, new {htmlAttributes = new {@class = "form-control starttimecss"}})
+                <div class="input-group-addon text-pointer">
+                    <div class="glyphicon glyphicon-time"></div>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(s => s.KartaKontaktu.DataSpotkania)
+        </div>
+
+        <div class="form-group">
+            <p> @Html.RadioButtonFor(m => m.KartaKontaktu.FormaKontaktu, "Email")E-mail</p>
+            <p> @Html.RadioButtonFor(m => m.KartaKontaktu.FormaKontaktu, "Telefon")Telefon</p>
+            <p> @Html.RadioButtonFor(m => m.KartaKontaktu.FormaKontaktu, "Spotkanie")Spotkanie</p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(s => s.KartaKontaktu.Notatki)
+            @Html.TextAreaFor(s => s.KartaKontaktu.Notatki, new { @class = "form-control" })
+            @Html.ValidationMessageFor(s => s.KartaKontaktu.Notatki)
+        </div>
+        <br />
+            @Html.HiddenFor(s => s.KartaKontaktu.Id)
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+    }
+   
+
+    @section scripts
+    {
+        <script src="~/Scripts/pl.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetime1').datetimepicker({
+                    locale: 'pl'
+                   
+                });
+
+            });
+        </script>
+    }
+</body>
+</html>
+
