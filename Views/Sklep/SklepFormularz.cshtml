@@ -54,12 +54,13 @@
         <p> @Html.RadioButtonFor(m => m.Sklep.TypParking, "Mniej jak 200m2")Mniej jak 200m2</p>
     </div>
 
-    <div class="checkbox">
-        <p>Czy sklep jest w sieci</p>
-        <label>
-            @Html.CheckBoxFor(m => m.Sklep.CzySieciowy) Tak
-        </label>
-    </div>
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Sklep.CzySieciowy)
+        <p>
+            @Html.RadioButtonFor(m => m.Sklep.CzySieciowy, true) Tak
+        </p>
+        <p>    @Html.RadioButtonFor(m => m.Sklep.CzySieciowy, false) Nie</p>
+</div>
 
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Nip)
@@ -73,4 +74,6 @@
 
     @Html.HiddenFor(s => s.Sklep.Id)
     <button type="submit" class="btn btn-primary">Zapisz</button>
+    @Html.ActionLink("Wróć", "Index", null, new { @class = "btn btn-warning" })
+
 }

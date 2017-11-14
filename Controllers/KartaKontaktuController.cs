@@ -40,7 +40,7 @@ namespace KartaPracy.Controllers
         {
             String constring = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 SqlConnection con = new SqlConnection(constring);
-                string query = "select * From KartaKontaktus";
+                string query = "select k.Id, k.DataSpotkania, k.FormaKontaktu, k.Notatki, s.Nazwa, s.Miejscowosc, w.Nazwisko, w.Telefon From KartaKontaktus as k, Skleps as s, Kontakts as w where k.SklepId = s.Id and s.KontaktId = w.Id";
                 DataTable dt = new DataTable();
                 dt.TableName = "KartaKOntaktus";
             

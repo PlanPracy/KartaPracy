@@ -12,6 +12,8 @@ namespace KartaPracy.ViewModels
         public IEnumerable<Sklep> Skleps { get; set; }
         public KartaKontaktu KartaKontaktu { get; set; }
 
+        public IEnumerable<Kontakt> Kontakts { get; set; } 
+
         public string Tytul
         {
             get

@@ -17,36 +17,63 @@
 else
 {
     using (Html.BeginForm("ExportData", "KartaKontaktu", FormMethod.Post))
-     {
-         <td>
-             <input type="submit" name="btnExportLicensing" style="width: 140px;"
-                    value="Export" id="exportLicensing" class="button"/>
-         </td>
-         <table id="zdarzenie" class="table table-bordered table-hover">
-             <thead>
-                 <tr>
-                     <th>Id</th>
-                     <th>Sklep</th>
-                     <th>Data</th>
-                     <th>Forma kontaktu</th>
-                     <th>Notatki</th>
-                 </tr>
-             </thead>
-             <tbody>
-                 @foreach (var zdarzenie in Model)
-                 {
-                     <tr>
-                         <td>@zdarzenie.Id</td>
-                         <td>@zdarzenie.Sklep.Nazwa</td>
-                         <td>@zdarzenie.DataSpotkania</td>
-                         <td>@zdarzenie.FormaKontaktu</td>
-                         <td>@zdarzenie.Notatki</td>
-                         <td><button data-sklep-id="@zdarzenie.Id" class="btn-link js-delete">Delete</button>@Html.ActionLink("Edytuj", "Edit", "KartaKontaktu", new {id = zdarzenie.Id}, null)
+    {
+        <td>
+            <input type="submit" name="btnExportLicensing" 
+                   value="Export do excela" id="exportLicensing" class="btn btn-lin"/>
+        </td>
+    }
+    <br/>
+    <table id="zdarzenia" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Sklep</th>
+                    <th>Data</th>
+                    <th>Forma kontaktu</th>
+                    <th>Miejscowość</th>
+                    <th>Notatki</th>
+                    <th>Akcja</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var zdarzenie in Model)
+                {
+                    <tr>
+                        <td>@zdarzenie.Id</td>
+                        <td>@zdarzenie.Sklep.Nazwa</td>
+                        <td>@zdarzenie.DataSpotkania</td>
+                        <td>@zdarzenie.FormaKontaktu</td>
+                        <td>@zdarzenie.Sklep.Miejscowosc</td>
+                        <td>@zdarzenie.Notatki</td>
+                        <td><button data-zdarzenie-id="@zdarzenie.Id" class="btn-link js-delete">Delete</button>@Html.ActionLink("Edytuj", "Edit", "KartaKontaktu", new { id = zdarzenie.Id }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+          var table=  $("#zdarzenia").DataTable();
 
-                         </td>
-                     </tr>
-                 }
-             </tbody>
-         </table>
-     }
+            $("#zdarzenia").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Czy na pewno chcesz usunąć zdarzenie? ", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/KartaKontaktu/" + button.attr("data-zdarzenie-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
 }

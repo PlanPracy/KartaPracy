@@ -44,7 +44,7 @@ else
             $("#sklep").on("click", ".js-delete", function () {
                 var button = $(this);
 
-                bootbox.confirm("Czy na pewno chcesz usunąć sklep?", function(result) {
+                bootbox.confirm("Czy na pewno chcesz usunąć sklep? Pamiętaj, że usuwając sklep usuwasz też zdarzenie związane z tym sklepem", function (result) {
                     if (result) {
                         $.ajax({
                             url: "/api/sklep/" + button.attr("data-sklep-id"),

@@ -239,7 +239,8 @@
     <Compile Include="Controllers\KontaktController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SklepController.cs" />
-    <Compile Include="fonts\Dtos\SklepDto.cs" />
+    <Compile Include="Dtos\KartaKontaktuDto.cs" />
+    <Compile Include="Dtos\SklepDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -250,6 +251,10 @@
     <Compile Include="Migrations\201711101257038_DodanieAdresuDoSklepu.cs" />
     <Compile Include="Migrations\201711101257038_DodanieAdresuDoSklepu.Designer.cs">
       <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711130754207_ZmianNrTelefonu.cs" />
+    <Compile Include="Migrations\201711130754207_ZmianNrTelefonu.Designer.cs">
+      <DependentUpon>201711130754207_ZmianNrTelefonu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -649,6 +654,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101257038_DodanieAdresuDoSklepu.resx">
       <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711130754207_ZmianNrTelefonu.resx">
+      <DependentUpon>201711130754207_ZmianNrTelefonu.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

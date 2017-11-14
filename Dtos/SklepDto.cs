@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace KartaPracy.Models
+namespace KartaPracy.Dtos
 {
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Web.Mvc;
+    using Models;
 
-    public class Sklep
+    public class SklepDto
     {
         [Key]
         public int Id { get; set; }
@@ -25,12 +21,12 @@ namespace KartaPracy.Models
         [Display(Name = "Właściciel/osoba do kontaktu")]
         public byte KontaktId { get; set; }
 
-       
+
         public FormatSklepu FormatSklepu { get; set; }
         [Display(Name = "Format sklepu")]
         public byte FormatSklepuId { get; set; }
 
-       
+
         public string Nip { get; set; }
 
         [Required]

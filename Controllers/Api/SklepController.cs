@@ -25,7 +25,7 @@ namespace KartaPracy.Controllers.Api
             return _context.Skleps.ToList().Select(Mapper.Map<Sklep, SklepDto>);
         }
 
-        //Get /api/customer/1
+        //Get /api/sklep/1
         public IHttpActionResult GetSklepy(int id)
         {
             var customer = _context.Skleps.SingleOrDefault(c => c.Id == id);
