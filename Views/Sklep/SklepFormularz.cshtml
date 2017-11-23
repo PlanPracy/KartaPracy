@@ -9,7 +9,7 @@
 <h2>@Model.Tytul</h2>
 @using (@Html.BeginForm("Save", "Sklep"))
 {
-   <div class="form-group">
+    <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Nazwa)
         @Html.TextBoxFor(s => s.Sklep.Nazwa, new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.Nazwa)
@@ -17,13 +17,13 @@
     <div class="form-group">
 
         @Html.LabelFor(s => s.Sklep.KontaktId)
-       
+
         @Html.DropDownListFor(s => s.Sklep.KontaktId, new SelectList(Model.Kontakts, "Id", "Nazwisko"), "Wybierz osobę do kontaktu", new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.KontaktId)
         <p>Jeśli nie ma na liście dodaj nową osobę</p> @Html.ActionLink("Dodaj", "New", "Kontakt", null, new { @class = "btn btn-primary" })
     </div>
 
-  <h3>Adres sklepu</h3>
+    <h3>Adres sklepu</h3>
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Miejscowosc)
         @Html.TextBoxFor(s => s.Sklep.Miejscowosc, new { @class = "form-control" })
@@ -34,33 +34,56 @@
         @Html.TextBoxFor(s => s.Sklep.Ulica, new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.Ulica)
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(s => s.Sklep.NrLokalu)
+        @Html.TextBoxFor(s => s.Sklep.NrLokalu, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Sklep.NrLokalu)
+    </div>
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Kod)
         @Html.TextBoxFor(s => s.Sklep.Kod, new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.Kod)
     </div>
 
-   
+
     <h3>Informacje o sklepie</h3>
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.FormatSklepuId)
-        @Html.DropDownListFor(s => s.Sklep.FormatSklepuId, new SelectList(Model.FormatSklepus, "Id", "JakiFormatSklepu"), "Wybierz format sklepu", new {@class = "form-control"})
+        @Html.DropDownListFor(s => s.Sklep.FormatSklepuId, new SelectList(Model.FormatSklepus, "Id", "JakiFormatSklepu"), "Wybierz format sklepu", new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.FormatSklepuId)
     </div>
     <div class="form-group">
-        @Html.LabelFor(s => s.Sklep.TypParking)
-        <p> @Html.RadioButtonFor(m => m.Sklep.TypParking, "Brak parkingu")Brak</p>
-        <p> @Html.RadioButtonFor(m => m.Sklep.TypParking, "Więcej jak 200m2")Więcej jak 200m2</p>
-        <p> @Html.RadioButtonFor(m => m.Sklep.TypParking, "Mniej jak 200m2")Mniej jak 200m2</p>
+        @Html.LabelFor(s => s.Sklep.Powierzchnia)
+        <p> @Html.RadioButtonFor(m => m.Sklep.Powierzchnia, "do 80 m2")do 80 m2</p>
+        <p> @Html.RadioButtonFor(m => m.Sklep.Powierzchnia, "80-100 m2")80-100 m2</p>
+        <p> @Html.RadioButtonFor(m => m.Sklep.Powierzchnia, "powyżej 100 m2")powyżej 100 m2</p>
+        <p> @Html.RadioButtonFor(m => m.Sklep.Powierzchnia, "powyżej 200 m2")powyżej 200 m2</p>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m=>m.Sklep.CzySieciowy)
+        @Html.LabelFor(m => m.Sklep.CzyParking)
+        <p>
+            @Html.RadioButtonFor(m => m.Sklep.CzyParking, true) Tak
+        </p>
+        <p> @Html.RadioButtonFor(m => m.Sklep.CzyParking, false) Nie</p>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sklep.TypSklepu)
+        <p>
+            @Html.RadioButtonFor(m => m.Sklep.TypSklepu, "samoobsługowy") samoobsługowy
+        </p>
+        <p> @Html.RadioButtonFor(m => m.Sklep.TypSklepu, "ladowy") ladowy</p>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sklep.CzySieciowy)
         <p>
             @Html.RadioButtonFor(m => m.Sklep.CzySieciowy, true) Tak
         </p>
         <p>    @Html.RadioButtonFor(m => m.Sklep.CzySieciowy, false) Nie</p>
-</div>
+    </div>
 
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Nip)
@@ -68,7 +91,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(s => s.Sklep.Uwagi)
-        @Html.TextAreaFor(s => s.Sklep.Uwagi, new {@class = "form-control"})
+        @Html.TextAreaFor(s => s.Sklep.Uwagi, new { @class = "form-control" })
         @Html.ValidationMessageFor(s => s.Sklep.Uwagi)
     </div>
 

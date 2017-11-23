@@ -114,6 +114,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>TimePicker\MvcBootstrapTimepicker.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.ConnectorNET.Data.6.8.3\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.ConnectorNET.Entity.6.8.3.2\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -233,6 +241,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\KartaKontaktuController.cs" />
+    <Compile Include="Controllers\Api\KontaktController.cs" />
     <Compile Include="Controllers\Api\SklepController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KartaKontaktuController.cs" />
@@ -240,6 +249,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SklepController.cs" />
     <Compile Include="Dtos\KartaKontaktuDto.cs" />
+    <Compile Include="Dtos\KontaktDto.cs" />
     <Compile Include="Dtos\SklepDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,9 +262,13 @@
     <Compile Include="Migrations\201711101257038_DodanieAdresuDoSklepu.Designer.cs">
       <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711130754207_ZmianNrTelefonu.cs" />
-    <Compile Include="Migrations\201711130754207_ZmianNrTelefonu.Designer.cs">
-      <DependentUpon>201711130754207_ZmianNrTelefonu.cs</DependentUpon>
+    <Compile Include="Migrations\201711221700087_ZmianaSklepu.cs" />
+    <Compile Include="Migrations\201711221700087_ZmianaSklepu.Designer.cs">
+      <DependentUpon>201711221700087_ZmianaSklepu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711221722587_ZmianaParking.cs" />
+    <Compile Include="Migrations\201711221722587_ZmianaParking.Designer.cs">
+      <DependentUpon>201711221722587_ZmianaParking.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -655,8 +669,11 @@
     <EmbeddedResource Include="Migrations\201711101257038_DodanieAdresuDoSklepu.resx">
       <DependentUpon>201711101257038_DodanieAdresuDoSklepu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711130754207_ZmianNrTelefonu.resx">
-      <DependentUpon>201711130754207_ZmianNrTelefonu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711221700087_ZmianaSklepu.resx">
+      <DependentUpon>201711221700087_ZmianaSklepu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221722587_ZmianaParking.resx">
+      <DependentUpon>201711221722587_ZmianaParking.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

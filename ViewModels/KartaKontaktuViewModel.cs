@@ -19,8 +19,8 @@ namespace KartaPracy.ViewModels
             get
             {
                 if (KartaKontaktu != null && KartaKontaktu.Id != 0)
-                    return "Edytuj dane o zdarzeniu";
-                return "Dodaj nowe zdarzenie";
+                    return "Edytuj dane o wizycie";
+                return "Dodaj nową wizytę";
             }
         }
     }

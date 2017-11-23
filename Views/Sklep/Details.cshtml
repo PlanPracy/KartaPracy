@@ -15,9 +15,12 @@
     <body>
         <div>
             <ul>
-               
+
                 <li> Nip sklepu: @Model.Nip</li>
-                <li> Format sklepu: @Model.FormatSklepu.JakiFormatSklepu</li>
+                <li> Proponowana umowa: @Model.FormatSklepu.JakiFormatSklepu</li>
+                <li>
+                    Adres @Model.Miejscowosc, @Model.Ulica @Model.NrLokalu @Model.Kod
+                </li>
                 <h3>Kontakt do sklepu</h3>
                 <li> Imię i Nazwisko: @Model.Kontakt.Nazwisko</li>
                 <li>Telefon: @Model.Kontakt.Telefon</li>

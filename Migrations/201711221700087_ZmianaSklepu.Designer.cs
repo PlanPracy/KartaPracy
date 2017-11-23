@@ -7,13 +7,13 @@ namespace KartaPracy.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ZmianNrTelefonu : IMigrationMetadata
+    public sealed partial class ZmianaSklepu : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ZmianNrTelefonu));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ZmianaSklepu));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711130754207_ZmianNrTelefonu"; }
+            get { return "201711221700087_ZmianaSklepu"; }
         }
         
         string IMigrationMetadata.Source

@@ -34,6 +34,7 @@ namespace KartaPracy.Controllers.Api
             //  throw new HttpResponseException(HttpStatusCode.NotFound);
             return Ok(Mapper.Map<Sklep, SklepDto>(customer));
         }
+
         //Delete /api/sklep/1
         [HttpDelete]
         public void DeleteSklep(int id)

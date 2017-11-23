@@ -23,7 +23,7 @@ namespace KartaPracy.Dtos
 
 
         public FormatSklepu FormatSklepu { get; set; }
-        [Display(Name = "Format sklepu")]
+        [Display(Name = "Proponowana umowa")]
         public byte FormatSklepuId { get; set; }
 
 
@@ -34,19 +34,30 @@ namespace KartaPracy.Dtos
         public string Miejscowosc { get; set; }
 
         [Required]
-        [Display(Name = "Adres")]
+        [Display(Name = "Ulica")]
         public string Ulica { get; set; }
+
+        [Display(Name = "Numer lokalu")]
+        public string NrLokalu { get; set; }
 
         [Display(Name = "Kod pocztowy")]
         public string Kod { get; set; }
 
         public string Uwagi { get; set; }
 
-        [Display(Name = "Typ parkingu:")]
-        public string TypParking { get; set; }
+        [Display(Name = "Czy jest parking")]
+        public bool CzyParking { get; set; }
+
+        [Display(Name = "Powierzchnia")]
+        public string Powierzchnia { get; set; }
+
+
+        [Display(Name = "Typ sklepu")]
+        public string TypSklepu { get; set; }
 
         [Display(Name = "Czy jest w sieci?")]
         public bool CzySieciowy { get; set; }
+
         public DateTime DataUtworzeniaSklepu { get; set; }
     }
 }

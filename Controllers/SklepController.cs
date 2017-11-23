@@ -82,10 +82,13 @@
                 sklepInDb.Nip = sklep.Nip;
                 sklepInDb.Miejscowosc = sklep.Miejscowosc;
                 sklepInDb.Ulica = sklep.Ulica;
+                sklepInDb.NrLokalu = sklep.NrLokalu;
                 sklepInDb.Kod = sklep.Kod;
                 sklepInDb.Uwagi = sklep.Uwagi;
-                sklepInDb.TypParking = sklep.TypParking;
+                sklepInDb.CzyParking = sklep.CzyParking;
                 sklepInDb.CzySieciowy = sklep.CzySieciowy;
+                sklepInDb.Powierzchnia = sklep.Powierzchnia;
+                sklepInDb.TypSklepu = sklep.TypSklepu;
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Sklep");
