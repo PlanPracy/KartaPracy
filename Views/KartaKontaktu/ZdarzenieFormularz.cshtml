@@ -1,4 +1,5 @@
-﻿@model KartaPracy.ViewModels.KartaKontaktuViewModel
+﻿@using KartaPracy.Models
+@model KartaPracy.ViewModels.KartaKontaktuViewModel
 
 
 @{
@@ -28,8 +29,11 @@
             @Html.LabelFor(s => s.KartaKontaktu.SklepId)
             @Html.DropDownListFor(s => s.KartaKontaktu.SklepId, new SelectList(Model.Skleps, "Id", "Nazwa"), "Wybierz sklep", new { @class = "form-control" })
             @Html.ValidationMessageFor(s => s.KartaKontaktu.SklepId)
-        </div>
 
+            
+        </div>
+        //var zapytanie = @"select Count(SklepId) from KartaKontaktus where SklepId = 1";
+        //kartaKontaktu.NrSpotkania = Convert.ToInt16(zapytanie);
         <div class="form-group">
             @Html.LabelFor(s => s.KartaKontaktu.DataSpotkania)
             <div class="input-group timeText" id="datetime1">

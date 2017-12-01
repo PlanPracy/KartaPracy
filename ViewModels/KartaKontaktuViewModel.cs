@@ -23,5 +23,7 @@ namespace KartaPracy.ViewModels
                 return "Dodaj nową wizytę";
             }
         }
+
+     
     }
 }

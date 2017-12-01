@@ -39,4 +39,4 @@ C:\Moje\KartaPracy\obj\Release\KartaPracy.Migrations.ZmianaSklepu.resources
 C:\Moje\KartaPracy\obj\Release\KartaPracy.Migrations.ZmianaParking.resources
 C:\Moje\KartaPracy\bin\MySql.Data.dll
 C:\Moje\KartaPracy\bin\MySql.Data.Entity.EF6.dll
-C:\Moje\KartaPracy\obj\Release\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\KartaPracy\obj\Release\KartaPracy.Migrations.DodanieNrSpotkania.resources

@@ -12,6 +12,7 @@ namespace KartaPracy.Controllers
     using System.Data.SqlClient;
     using System.IO;
     using ClosedXML.Excel;
+    using Microsoft.Ajax.Utilities;
     using Models;
     using ViewModels;
 
@@ -32,44 +33,44 @@ namespace KartaPracy.Controllers
         // GET: KartaKontaktu
         public ActionResult Index()
         {
-            var plan = _context.KartaKontaktus.Include(c=>c.Sklep).ToList();
+            var plan = _context.KartaKontaktus.Include(c => c.Sklep).ToList();
             return View(plan);
         }
 
         public ActionResult ExportData()
         {
             String constring = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                SqlConnection con = new SqlConnection(constring);
-                string query = "select k.Id, k.DataSpotkania, k.FormaKontaktu, k.Notatki, s.Nazwa, s.Miejscowosc, s.Ulica, s.NrLokalu, w.Nazwisko, w.Telefon From KartaKontaktus as k, Skleps as s, Kontakts as w where k.SklepId = s.Id and s.KontaktId = w.Id";
-                DataTable dt = new DataTable();
-                dt.TableName = "KartaKOntaktus";
-            
-                con.Open();
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                da.Fill(dt);
-                con.Close();
+            SqlConnection con = new SqlConnection(constring);
+            string query = "select k.Id, k.DataSpotkania, k.FormaKontaktu, k.Notatki, s.Nazwa, s.Miejscowosc, s.Ulica, s.NrLokalu, w.Nazwisko, w.Telefon From KartaKontaktus as k, Skleps as s, Kontakts as w where k.SklepId = s.Id and s.KontaktId = w.Id";
+            DataTable dt = new DataTable();
+            dt.TableName = "KartaKOntaktus";
 
-                using (XLWorkbook wb = new XLWorkbook())
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            da.Fill(dt);
+            con.Close();
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                wb.Style.Font.Bold = true;
+
+                Response.Clear();
+                Response.Buffer = true;
+                Response.Charset = "";
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                Response.AddHeader("content-disposition", "attachment;filename= KartaPracyRaport.xlsx");
+
+                using (MemoryStream MyMemoryStream = new MemoryStream())
                 {
-                    wb.Worksheets.Add(dt);
-                    wb.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                    wb.Style.Font.Bold = true;
-
-                    Response.Clear();
-                    Response.Buffer = true;
-                    Response.Charset = "";
-                    Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-                    Response.AddHeader("content-disposition", "attachment;filename= KartaPracyRaport.xlsx");
-
-                    using (MemoryStream MyMemoryStream = new MemoryStream())
-                    {
-                        wb.SaveAs(MyMemoryStream);
-                        MyMemoryStream.WriteTo(Response.OutputStream);
-                        Response.Flush();
-                        Response.End();
-                    }
+                    wb.SaveAs(MyMemoryStream);
+                    MyMemoryStream.WriteTo(Response.OutputStream);
+                    Response.Flush();
+                    Response.End();
                 }
-                return RedirectToAction("Index", "KartaKontaktu");
+            }
+            return RedirectToAction("Index", "KartaKontaktu");
         }
 
         private void releaseObject(object obj)
@@ -88,13 +89,21 @@ namespace KartaPracy.Controllers
                 GC.Collect();
             }
         }
-    
+        public ActionResult Details(int id)
+        {
+            var wizyta = _context.KartaKontaktus.Include(c => c.Sklep).SingleOrDefault(c => c.Id == id);
+            if (wizyta == null)
+                HttpNotFound();
+            return View(wizyta);
+        }
 
         public ActionResult New()
         {
             var sklepy = _context.Skleps.ToList();
+
             var viewModel = new KartaKontaktuViewModel
             {
+
                 KartaKontaktu = new KartaKontaktu(),
                 Skleps = sklepy
             };
@@ -117,17 +126,30 @@ namespace KartaPracy.Controllers
 
         public ActionResult Save(KartaKontaktu kartaKontaktu)
         {
+
+            //select Count (SklepId) from KartaKontaktus where SklepId=1
             if (!ModelState.IsValid)
             {
                 var viewModel = new KartaKontaktuViewModel
                 {
+
                     KartaKontaktu = kartaKontaktu,
                     Skleps = _context.Skleps.ToList()
+
                 };
                 return View("ZdarzenieFormularz", viewModel);
             }
             if (kartaKontaktu.Id == 0)
             {
+                int obecneIdSklepu = kartaKontaktu.SklepId;
+                int count = 0;
+                foreach (var item in _context.KartaKontaktus.ToList())
+                {
+                    int id = obecneIdSklepu;
+                    count = _context.KartaKontaktus.Where(x => x.Sklep.Id == id).Count();
+                }
+                kartaKontaktu.NrSpotkania = ++count;
+
                 _context.KartaKontaktus.Add(kartaKontaktu);
             }
             else

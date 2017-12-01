@@ -139,3 +139,14 @@ C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.TworzenieTabeli.resources
 C:\Moje\KartaPracy\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
 C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.DodanieAdresuDoSklepu.resources
 C:\Moje\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\KartaPracy\bin\ClosedXML.dll
+C:\Moje\KartaPracy\bin\DocumentFormat.OpenXml.dll
+C:\Moje\KartaPracy\bin\FastMember.Signed.dll
+C:\Moje\KartaPracy\bin\MySql.Data.dll
+C:\Moje\KartaPracy\bin\MySql.Data.Entity.EF6.dll
+C:\Moje\KartaPracy\bin\ClosedXML.pdb
+C:\Moje\KartaPracy\bin\ClosedXML.xml
+C:\Moje\KartaPracy\bin\DocumentFormat.OpenXml.xml
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaSklepu.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaParking.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.DodanieNrSpotkania.resources

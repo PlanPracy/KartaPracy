@@ -26,6 +26,9 @@ namespace KartaPracy.Models
         [Display(Name = "Sklep")]
         public int SklepId { get; set; }
 
+        [Display(Name = "Numer spotkania")]
+        public int NrSpotkania { get; set; }
+
         [Required]
         [Display(Name = "Data i godzina spotkania")]
         [DataType((DataType) DataType.DateTime)]

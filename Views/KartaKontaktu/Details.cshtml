@@ -1,0 +1,82 @@
+﻿@model KartaPracy.Models.KartaKontaktu
+
+<h2>Szczegóły wizyty @Model.Sklep.Nazwa</h2>
+<div>
+    <div align="left">
+        <hr />
+        <h4>Informacje o spotkaniu</h4>
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.NrSpotkania):</dt>
+            <dd>@Html.DisplayFor(model => model.NrSpotkania)</dd>
+            <dt>@Html.DisplayNameFor(model => model.DataSpotkania):</dt>
+            <dd>@Html.DisplayFor(model => model.DataSpotkania)</dd>
+            <dt>@Html.DisplayNameFor(model => model.FormaKontaktu):</dt>
+            <dd>@Html.DisplayFor(model => model.FormaKontaktu)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Notatki):</dt>
+            <dd>@Html.DisplayFor(model => model.Notatki)</dd>
+        </dl>
+    </div>
+    <div align="right">
+        <hr />
+        <h4>
+            Informacje o adresie
+        </h4>
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Sklep.Miejscowosc):</dt>
+            <dd>@Html.DisplayFor(model => model.Sklep.Miejscowosc)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Sklep.Ulica) i @Html.DisplayNameFor(model => model.Sklep.NrLokalu):</dt>
+            <dd>@Html.DisplayFor(model => model.Sklep.Ulica) @Html.DisplayFor(model => model.Sklep.NrLokalu)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Sklep.Kod):</dt>
+            <dd>@Html.DisplayFor(model => model.Sklep.Kod)</dd>
+        </dl>
+    </div>
+
+<div>
+    <hr/>
+    <h4>Informacje o sklepie</h4>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Sklep.FormatSklepuId):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.FormatSklepuId)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Sklep.Powierzchnia):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.Powierzchnia)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Sklep.CzyParking):</dt>
+        @if (Model.Sklep.CzyParking)
+        {
+            <dd>Tak</dd>
+        }
+        else
+        {
+            <dd>Nie</dd>
+        }
+
+
+        <dt>@Html.DisplayNameFor(model => model.Sklep.TypSklepu):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.TypSklepu)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Sklep.CzySieciowy):</dt>
+        @if (Model.Sklep.CzySieciowy)
+        {
+            <dd>Tak</dd>
+        }
+        else
+        {
+            <dd>Nie</dd>
+        }
+        <dt>@Html.DisplayNameFor(model => model.Sklep.Nip):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.Nip)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Sklep.Uwagi):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.Uwagi)</dd>
+    </dl>
+</div>
+<div>
+    <hr />
+    <h4>
+        Informacje o kontakcie do sklepu
+    </h4>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Sklep.KontaktId):</dt>
+        <dd>@Html.DisplayFor(model => model.Sklep.KontaktId)</dd>
+        
+    </dl>
+</div>
