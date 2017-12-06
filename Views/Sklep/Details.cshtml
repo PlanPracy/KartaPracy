@@ -1,4 +1,4 @@
-﻿@model KartaPracy.Models.Sklep
+﻿@model Repozytorium.Models.Sklep
 
 @{
     ViewBag.Title = "Szczegóły";
@@ -6,14 +6,74 @@
 }
 
 <!DOCTYPE html>
+<h2>Sklep @Model.Nazwa</h2>
 
 <html>
     <head>
         <title>@Model.Nazwa</title>
     </head>
-    <body>
-        <div>
-              
-        </div>
-    </body>
+<body>
+    <div style="border: 1px solid rgb(128, 128, 128); padding: 15px; margin-top: 15px">
+        <h4>Adres</h4>
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Miejscowosc):</dt>
+            <dd>@Html.DisplayFor(model => model.Miejscowosc)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Ulica) i @Html.DisplayNameFor(model => model.NrLokalu):</dt>
+            <dd>@Html.DisplayFor(model => model.Ulica) @Html.DisplayFor(model => model.NrLokalu)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Kod):</dt>
+            <dd>@Html.DisplayFor(model => model.Kod)</dd>
+        </dl>
+        <hr />
+        <h4>Informacje o sklepie</h4>
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.FormatSklepuId):</dt>
+            <dd>@Html.DisplayFor(model => model.FormatSklepu.JakiFormatSklepu)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Powierzchnia):</dt>
+            <dd>@Html.DisplayFor(model => model.Powierzchnia)</dd>
+            <dt>@Html.DisplayNameFor(model => model.CzyParking):</dt>
+            @if (Model.CzyParking)
+            {
+                <dd>Tak</dd>
+            }
+            else
+            {
+                <dd>Nie</dd>
+            }
+            <dt>@Html.DisplayNameFor(model => model.TypSklepu):</dt>
+            <dd>@Html.DisplayFor(model => model.TypSklepu)</dd>
+            <dt>@Html.DisplayNameFor(model => model.CzySieciowy):</dt>
+            @if (Model.CzySieciowy)
+            {
+                <dd>Tak</dd>
+            }
+            else
+            {
+                <dd>Nie</dd>
+            }
+            <dt>@Html.DisplayNameFor(model => model.Nip):</dt>
+            <dd>@Html.DisplayFor(model => model.Nip)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Uwagi):</dt>
+            <dd>@Html.DisplayFor(model => model.Uwagi)</dd>
+        </dl>
+    </div>
+
+    <div style="border: 1px solid rgb(128, 128, 128); padding: 15px; margin-top: 15px" />
+    <h4>
+        Kontakty
+    </h4>
+    @if (Model.Kontakty.Count == 0)
+    {
+        <span>Brak kontaktów</span>
+    }
+    else
+    {
+        foreach (var item in Model.Kontakty)
+        {
+            <p>@item.Nazwisko @item.Imie tel. @item.Telefon email: @item.Email</p>
+        }
+    }
+    <br />
+    @Html.ActionLink("Dodaj nowy kontakt", "Create", "Kontakt", new { id = Model.SklepId }, null)
+</body>
+
 </html>

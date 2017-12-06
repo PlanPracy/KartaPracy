@@ -15,6 +15,7 @@ C:\Moje\PlanPracy\KartaPracy\bin\KartaPracy.dll.config
 C:\Moje\PlanPracy\KartaPracy\bin\KartaPracy.dll
 C:\Moje\PlanPracy\KartaPracy\bin\KartaPracy.pdb
 C:\Moje\PlanPracy\KartaPracy\bin\Antlr3.Runtime.dll
+C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.dll
 C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.dll
 C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.SqlServer.dll
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AI.Agent.Intercept.dll
@@ -40,7 +41,10 @@ C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Web.Infrastructure.dll
 C:\Moje\PlanPracy\KartaPracy\bin\Newtonsoft.Json.dll
 C:\Moje\PlanPracy\KartaPracy\bin\Owin.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Helpers.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.dll
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Mvc.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Optimization.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Razor.dll
@@ -48,23 +52,27 @@ C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.Deployment.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.dll
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.Razor.dll
 C:\Moje\PlanPracy\KartaPracy\bin\WebGrease.dll
+C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.xml
+C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.xml
+C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.SqlServer.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AI.DependencyCollector.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AI.Web.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AI.WindowsServer.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.ApplicationInsights.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Helpers.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Mvc.xml
-C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Optimization.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Razor.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.Deployment.xml
 C:\Moje\PlanPracy\KartaPracy\bin\System.Web.WebPages.Razor.xml
+C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Optimization.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Antlr3.Runtime.pdb
 C:\Moje\PlanPracy\KartaPracy\bin\Newtonsoft.Json.xml
-C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.xml
-C:\Moje\PlanPracy\KartaPracy\bin\EntityFramework.SqlServer.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -77,10 +85,7 @@ C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Owin.Security.Google.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Moje\PlanPracy\KartaPracy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.dll
-C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.pdb
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajSklep.resources
-C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.add.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaTypuSklepu.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.zmienTYp6.resources
@@ -94,13 +99,204 @@ C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajTabeleFormatSk
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajNip.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.DodajKontaktTelefonIMail.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.two.resources
-C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.dll
-C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.dll
-C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.dll
-C:\Moje\PlanPracy\KartaPracy\bin\System.Net.Http.Formatting.xml
-C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.xml
-C:\Moje\PlanPracy\KartaPracy\bin\System.Web.Http.WebHost.xml
-C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.dll
-C:\Moje\PlanPracy\KartaPracy\bin\AutoMapper.xml
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.AddPostClass.resources
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.AddKarta.resources
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.AddKartaZIDSklep.resources
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.dll
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.pdb
+C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.JakiesZmiany.resources
 C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
-C:\Moje\PlanPracy\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaKontaktId.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.dll
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.pdb
+C:\Moje\KartaPracy\bin\ApplicationInsights.config
+C:\Moje\KartaPracy\bin\KartaPracy.dll.config
+C:\Moje\KartaPracy\bin\KartaPracy.dll
+C:\Moje\KartaPracy\bin\KartaPracy.pdb
+C:\Moje\KartaPracy\bin\EntityFramework.dll
+C:\Moje\KartaPracy\bin\EntityFramework.SqlServer.dll
+C:\Moje\KartaPracy\bin\Microsoft.Owin.dll
+C:\Moje\KartaPracy\bin\Microsoft.Owin.Security.dll
+C:\Moje\KartaPracy\bin\Microsoft.Owin.Security.Google.dll
+C:\Moje\KartaPracy\bin\System.Web.Helpers.dll
+C:\Moje\KartaPracy\bin\System.Web.Mvc.dll
+C:\Moje\KartaPracy\bin\System.Web.Razor.dll
+C:\Moje\KartaPracy\bin\System.Web.WebPages.Deployment.dll
+C:\Moje\KartaPracy\bin\System.Web.WebPages.dll
+C:\Moje\KartaPracy\bin\System.Web.WebPages.Razor.dll
+C:\Moje\KartaPracy\bin\EntityFramework.xml
+C:\Moje\KartaPracy\bin\EntityFramework.SqlServer.xml
+C:\Moje\KartaPracy\bin\Microsoft.Owin.xml
+C:\Moje\KartaPracy\bin\Microsoft.Owin.Security.xml
+C:\Moje\KartaPracy\bin\Microsoft.Owin.Security.Google.xml
+C:\Moje\KartaPracy\bin\System.Web.Helpers.xml
+C:\Moje\KartaPracy\bin\System.Web.Mvc.xml
+C:\Moje\KartaPracy\bin\System.Web.Razor.xml
+C:\Moje\KartaPracy\bin\System.Web.WebPages.xml
+C:\Moje\KartaPracy\bin\System.Web.WebPages.Deployment.xml
+C:\Moje\KartaPracy\bin\System.Web.WebPages.Razor.xml
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.TworzenieTabeli.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.DodanieAdresuDoSklepu.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\KartaPracy\bin\ClosedXML.dll
+C:\Moje\KartaPracy\bin\DocumentFormat.OpenXml.dll
+C:\Moje\KartaPracy\bin\FastMember.Signed.dll
+C:\Moje\KartaPracy\bin\MySql.Data.dll
+C:\Moje\KartaPracy\bin\MySql.Data.Entity.EF6.dll
+C:\Moje\KartaPracy\bin\ClosedXML.pdb
+C:\Moje\KartaPracy\bin\ClosedXML.xml
+C:\Moje\KartaPracy\bin\DocumentFormat.OpenXml.xml
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaSklepu.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.ZmianaParking.resources
+C:\Moje\KartaPracy\obj\Debug\KartaPracy.Migrations.DodanieNrSpotkania.resources
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\ApplicationInsights.config
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\KartaPracy.dll.config
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\KartaPracy.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\KartaPracy.pdb
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\ClosedXML.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\DocumentFormat.OpenXml.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\EntityFramework.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\EntityFramework.SqlServer.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\FastMember.Signed.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.Google.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\MySql.Data.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\MySql.Data.Entity.EF6.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Helpers.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Mvc.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Razor.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.Deployment.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.Razor.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\ClosedXML.pdb
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\ClosedXML.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\DocumentFormat.OpenXml.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\EntityFramework.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\EntityFramework.SqlServer.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.Google.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Helpers.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Mvc.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Razor.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.Deployment.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.WebPages.Razor.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.dll
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.pdb
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.Migrations.ZmianaIdSklep.resources
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\KartaPracy_zZmienionymi komentarzami\obj\Debug\KartaPracy.Migrations.ZmianaOpisu.resources
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\AutoMapper.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AI.DependencyCollector.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AI.Web.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AI.WindowsServer.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.ApplicationInsights.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Net.Http.Formatting.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Http.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Http.WebHost.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\System.Web.Optimization.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Antlr3.Runtime.pdb
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Newtonsoft.Json.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Moje\KartaPracy_zZmienionymi komentarzami\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Moje\KartaPracy_zkontekstem\obj\Debug\KartaPracy.dll
+C:\Moje\KartaPracy_zkontekstem\obj\Debug\KartaPracy.pdb
+C:\Moje\KartaPracy_zkontekstem\bin\ApplicationInsights.config
+C:\Moje\KartaPracy_zkontekstem\bin\KartaPracy.dll.config
+C:\Moje\KartaPracy_zkontekstem\bin\KartaPracy.dll
+C:\Moje\KartaPracy_zkontekstem\bin\KartaPracy.pdb
+C:\Moje\KartaPracy_zkontekstem\bin\ClosedXML.dll
+C:\Moje\KartaPracy_zkontekstem\bin\DocumentFormat.OpenXml.dll
+C:\Moje\KartaPracy_zkontekstem\bin\EntityFramework.dll
+C:\Moje\KartaPracy_zkontekstem\bin\EntityFramework.SqlServer.dll
+C:\Moje\KartaPracy_zkontekstem\bin\FastMember.Signed.dll
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.dll
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.Security.dll
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.Security.Google.dll
+C:\Moje\KartaPracy_zkontekstem\bin\MySql.Data.dll
+C:\Moje\KartaPracy_zkontekstem\bin\MySql.Data.Entity.EF6.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Helpers.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Mvc.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Razor.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.Deployment.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.dll
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.Razor.dll
+C:\Moje\KartaPracy_zkontekstem\bin\ClosedXML.pdb
+C:\Moje\KartaPracy_zkontekstem\bin\ClosedXML.xml
+C:\Moje\KartaPracy_zkontekstem\bin\DocumentFormat.OpenXml.xml
+C:\Moje\KartaPracy_zkontekstem\bin\EntityFramework.xml
+C:\Moje\KartaPracy_zkontekstem\bin\EntityFramework.SqlServer.xml
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.xml
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.Security.xml
+C:\Moje\KartaPracy_zkontekstem\bin\Microsoft.Owin.Security.Google.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Helpers.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Mvc.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.Razor.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.Deployment.xml
+C:\Moje\KartaPracy_zkontekstem\bin\System.Web.WebPages.Razor.xml
+C:\Moje\KartaPracy_zkontekstem\obj\Debug\KartaPracy.Migrations.start.resources
+C:\Moje\KartaPracy_zkontekstem\obj\Debug\KartaPracy.csproj.GenerateResource.Cache
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\ApplicationInsights.config
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\KartaPracy.dll.config
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\KartaPracy.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\KartaPracy.pdb
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\ClosedXML.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\DocumentFormat.OpenXml.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\EntityFramework.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\EntityFramework.SqlServer.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\FastMember.Signed.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.Security.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.Security.Google.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\MySql.Data.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\MySql.Data.Entity.EF6.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Helpers.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Mvc.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Razor.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.Deployment.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.Razor.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\ClosedXML.pdb
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\ClosedXML.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\DocumentFormat.OpenXml.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\EntityFramework.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\EntityFramework.SqlServer.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.Security.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Microsoft.Owin.Security.Google.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Helpers.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Mvc.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.Razor.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.Deployment.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\System.Web.WebPages.Razor.xml
+C:\Moje\KartaPracy_przeniesienieDoRepo\obj\Debug\KartaPracy.csprojResolveAssemblyReference.cache
+C:\Moje\KartaPracy_przeniesienieDoRepo\obj\Debug\KartaPracy.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\obj\Debug\KartaPracy.pdb
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\csc.exe
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\System.Collections.Immutable.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\vbc.exe
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\VBCSCompiler.exe
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\roslyn\VBCSCompiler.exe.config
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Repozytorium.dll
+C:\Moje\KartaPracy_przeniesienieDoRepo\bin\Repozytorium.pdb

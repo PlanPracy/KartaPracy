@@ -10,14 +10,15 @@ namespace KartaPracy.Controllers.Api
     using AutoMapper;
     using Dtos;
     using Models;
+    using Repozytorium.Models;
 
     public class SklepController : ApiController
     {
-        private ApplicationDbContext _context;
+        private KartaDbContext _context;
 
         public SklepController()
         {
-            _context = new ApplicationDbContext();
+            _context = new KartaDbContext();
         }
 
         public IEnumerable<SklepDto> GetSklepy()
@@ -25,20 +26,21 @@ namespace KartaPracy.Controllers.Api
             return _context.Skleps.ToList().Select(Mapper.Map<Sklep, SklepDto>);
         }
 
-        //Get /api/customer/1
+        //Get /api/sklep/1
         public IHttpActionResult GetSklepy(int id)
         {
-            var customer = _context.Skleps.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Skleps.SingleOrDefault(c => c.SklepId == id);
             if (customer == null)
                 return NotFound();
             //  throw new HttpResponseException(HttpStatusCode.NotFound);
             return Ok(Mapper.Map<Sklep, SklepDto>(customer));
         }
+
         //Delete /api/sklep/1
         [HttpDelete]
         public void DeleteSklep(int id)
         {
-            var sklepyInDb = _context.Skleps.SingleOrDefault(c => c.Id == id);
+            var sklepyInDb = _context.Skleps.SingleOrDefault(c => c.SklepId == id);
             if (sklepyInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 

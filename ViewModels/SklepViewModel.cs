@@ -7,6 +7,7 @@ namespace KartaPracy.ViewModels
 {
     using Models;
     using System.Web.Mvc;
+    using Repozytorium.Models;
 
     public class SklepViewModel
     {
@@ -21,7 +22,7 @@ namespace KartaPracy.ViewModels
         {
             get
             {
-                if (Sklep != null && Sklep.Id != 0)
+                if (Sklep != null && Sklep.SklepId != 0)
                     return "Edytuj dane o sklepie";
                 return "Dodaj nowy sklep";
             }

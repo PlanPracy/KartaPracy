@@ -1,0 +1,82 @@
+﻿@using System.Web.Mvc.Html
+@model System.Collections.Generic.List<Repozytorium.Models.KartaKontaktu>
+
+@{
+    ViewBag.Title = "Karta Pracy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Plan Pracy </h2>
+
+<p>@Html.ActionLink("Dodaj nową wizytę", "New", "KartaKontaktu", null, new { @class = "btn btn-primary" })</p>
+
+
+@if (!Model.Any())
+{
+    <p>Nie ma żadnego zdarzenia</p>
+}
+else
+{
+    using (Html.BeginForm("ExportData", "KartaKontaktu", FormMethod.Post))
+    {
+        <td>
+            <input type="submit" name="btnExportLicensing" 
+                   value="Export do excela" id="exportLicensing" class="btn btn-lin"/>
+        </td>
+    }
+    <br/>
+    <table id="zdarzenia" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>Sklep</th>
+                    <th>Data</th>
+                    <th>Forma kontaktu</th>
+                    <th>Nr spotkania</th>
+                    <th>Miejscowość</th>
+                    <th>Notatki</th>
+                    <th>Akcja</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var zdarzenie in Model)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(zdarzenie.Sklep.Nazwa, "Details", "KartaKontaktu", new {id = zdarzenie.Id}, null)</td>
+                        
+                        <td>@zdarzenie.DataSpotkania</td>
+                        <td>@zdarzenie.FormaKontaktu</td>
+                        <td>@zdarzenie.NrSpotkania</td>
+                        <td>@zdarzenie.Sklep.Miejscowosc</td>
+                        <td>@zdarzenie.Notatki</td>
+                        <td><button data-zdarzenie-id="@zdarzenie.Id" class="btn-link js-delete">Delete</button>@Html.ActionLink("Edytuj", "Edit", "KartaKontaktu", new { id = zdarzenie.Id }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+          var table=  $("#zdarzenia").DataTable();
+
+            $("#zdarzenia").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Czy na pewno chcesz usunąć wizytę? ", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/KartaKontaktu/" + button.attr("data-zdarzenie-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
+}

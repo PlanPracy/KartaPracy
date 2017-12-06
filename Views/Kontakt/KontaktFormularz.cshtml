@@ -1,39 +1,41 @@
 ﻿@using KartaPracy.Models
-@model KartaPracy.ViewModels.KontaktViewModel
+@model KartaPracy.Models.Kontakt
 
 @{
     ViewBag.Title = "KontaktFormularz";
     Layout = "~/Views/Shared/_Layout.cshtml";
-   
 }
 
 
-<h2>@Model.Tytul</h2>
+<h2>@Model.Nazwisko</h2>
 @using (@Html.BeginForm("Save", "Kontakt"))
 {
     <div class="form-group">
-        @Html.LabelFor(s => s.Kontakt.Nazwisko)
-        @Html.TextBoxFor(s => s.Kontakt.Nazwisko, new {@class = "form-control"})
-        @Html.ValidationMessageFor(s => s.Kontakt.Nazwisko)
+        @Html.LabelFor(s => s.Nazwisko)
+        @Html.TextBoxFor(s => s.Nazwisko, new {@class = "form-control"})
+        @Html.ValidationMessageFor(s => s.Nazwisko)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Imie)
+        @Html.TextBoxFor(s => s.Imie, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Telefon)
+        @Html.TextBoxFor(s => s.Telefon, new {@class = "form-control"})
+        @Html.ValidationMessageFor(s => s.Telefon)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(s => s.Kontakt.Telefon)
-        @Html.TextBoxFor(s => s.Kontakt.Telefon, new {@class = "form-control"})
+        @Html.LabelFor(s => s.Email)
+        @Html.TextBoxFor(s => s.Email, new {@class = "form-control"})
+        @Html.ValidationMessageFor(s => s.Email)
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(s => s.Kontakt.Email)
-        @Html.TextBoxFor(s => s.Kontakt.Email, new {@class = "form-control"})
+  <div class="form-group">
+        @Html.LabelFor(s => s.Opis)
+        @Html.TextAreaFor(s => s.Opis, new { @class = "form-control" })
     </div>
-    <div class="form-group">
-        @Html.LabelFor(s => s.Kontakt.Opis)
-        @Html.TextBoxFor(s => s.Kontakt.Opis, new {@class = "form-control"})
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(s => s.Kontakt.OsobaDoKontaktu)
-        @Html.TextBoxFor(s => s.Kontakt.OsobaDoKontaktu, new {@class = "form-control"})
-    </div>
-    @Html.HiddenFor(s => s.Kontakt.Id)
+    @Html.HiddenFor(s => s.Id)
     <button type="submit" class="btn btn-primary">Zapisz</button>
+    @Html.ActionLink("Wróć", "Index", null, new { @class = "btn btn-warning" })
 }

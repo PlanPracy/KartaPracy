@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<KartaPracy.Models.Sklep>
+﻿@model System.Collections.Generic.List<Repozytorium.Models.Sklep>
 
 @{
     ViewBag.Title = "Sklepy";
@@ -12,28 +12,41 @@
     <p>Nie ma żadnego sklepu</p>
 }
 else
-{ 
-<table id="sklep" class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th>Sklep</th>
-            <th>Kontakt</th>
-            <th>Typ sklepu</th>
-            <th>Usuń</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var sklep in Model)
-        {
+{
+    <table id="sklep" class="table table-bordered table-hover">
+        <thead>
             <tr>
-                <td>@Html.ActionLink(sklep.Nazwa, "Edit", "Sklep", new {id = sklep.Id}, null)</td>
-                <td>@sklep.Kontakt.Nazwisko</td>
-                <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
-                <td><button data-sklep-id="@sklep.Id" class="btn-link js-delete">Delete</button></td>
+                <th>Sklep</th>
+                <th>Kontakt</th>
+                <th>Proponowana umowa</th>
+                <th>Akcja</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var sklep in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(sklep.Nazwa, "Details", "Sklep", new {id = sklep.SklepId}, null)</td>
+                    <td>
+                        @Html.ActionLink("Dodaj kontakt", "Create", "Kontakt", new {id = sklep.SklepId}, null)
+                        @if (@sklep.Kontakty.Count == 0)
+                        {
+                            <span>Brak kontaktów</span>
+                        }
+                        else
+                        {
+                            foreach (var item in @sklep.Kontakty)
+                            {
+                                <p>@item.Nazwisko @item.Imie tel.@item.Telefon</p>
+                            }
+                        }
+                    </td>
+                    <td>@sklep.FormatSklepu.JakiFormatSklepu</td>
+                    <td><button data-sklep-id="@sklep.SklepId" class="btn btn-link js-delete">Usuń</button>@Html.ActionLink("Edytuj", "Edit", "Sklep", new {id = sklep.SklepId}, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 @section scripts
 {
@@ -44,7 +57,7 @@ else
             $("#sklep").on("click", ".js-delete", function () {
                 var button = $(this);
 
-                bootbox.confirm("Czy na pewno chcesz usunąć sklep?", function(result) {
+                bootbox.confirm("Czy na pewno chcesz usunąć sklep? Pamiętaj, że usuwając sklep usuwasz też zdarzenie związane z tym sklepem", function (result) {
                     if (result) {
                         $.ajax({
                             url: "/api/sklep/" + button.attr("data-sklep-id"),
@@ -59,7 +72,4 @@ else
 
         });
 </script>
-       
-
-  
 }

@@ -8,6 +8,7 @@ namespace KartaPracy.App_Start
     using AutoMapper;
     using Dtos;
     using Models;
+    using Repozytorium.Models;
 
     public class MappingProfile: Profile
     {
