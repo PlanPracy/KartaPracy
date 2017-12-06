@@ -123,8 +123,6 @@ namespace KartaPracy.Controllers
 
         public ActionResult Save(KartaKontaktu kartaKontaktu)
         {
-
-            //select Count (SklepId) from KartaKontaktus where SklepId=1
             if (!ModelState.IsValid)
             {
                 var viewModel = new KartaKontaktuViewModel
